@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Sep 27 13:48:25 2023
+# Process ID: 19056
+# Current directory: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
+# Log file: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source OTTER_Wrapper.tcl -notrace

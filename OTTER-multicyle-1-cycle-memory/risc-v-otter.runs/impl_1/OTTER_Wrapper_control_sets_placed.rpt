@@ -1,0 +1,95 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Sep 27 13:49:57 2023
+| Host         : DESKTOP-8G19R9A running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file OTTER_Wrapper_control_sets_placed.rpt
+| Design       : OTTER_Wrapper
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     3 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    10 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              45 |           24 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              29 |           10 |
+| Yes          | No                    | No                     |              68 |           33 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             112 |           59 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------+----------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|         Clock Signal        |              Enable Signal             |             Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------+----------------------------------------+------------------------------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG              |                                        |                                          |                2 |              2 |         1.00 |
+|  SSG_DISP/CathMod/s_clk_500 |                                        | SSG_DISP/CathMod/r_disp_digit[0]         |                1 |              2 |         2.00 |
+|  SSG_DISP/CathMod/s_clk_500 |                                        | SSG_DISP/CathMod/r_disp_digit[0]_i_1_n_0 |                1 |              2 |         2.00 |
+|  count_reg[17]              | MCU/CU_FSM/memRead1                    |                                          |                2 |              4 |         2.00 |
+|  sclk                       |                                        | DB/s_db_count[6]_i_1_n_0                 |                3 |              5 |         1.67 |
+|  SSG_DISP/CathMod/s_clk_500 |                                        |                                          |                5 |              9 |         1.80 |
+|  count_reg[17]              |                                        |                                          |                8 |             10 |         1.25 |
+|  count_reg[17]              | MCU/memory/state_reg[0]_0              | MCU/memory/mtvec_reg[18]_i_1_0           |                7 |             16 |         2.29 |
+|  count_reg[17]              | MCU/memory/state_reg[1]                | MCU/memory/ioIn_buffer[15]_i_1_n_0       |                7 |             16 |         2.29 |
+|  count_reg[17]              | MCU/memory/state_reg[0]_1              | MCU/memory/LEDS[15]_i_3_0                |                9 |             16 |         1.78 |
+|  CLK_IBUF_BUFG              |                                        | SSG_DISP/CathMod/clear                   |                5 |             20 |         4.00 |
+|  sclk                       |                                        |                                          |                9 |             24 |         2.67 |
+|  count_reg[17]              | RF_reg_r1_0_31_6_11_i_62_n_0           |                                          |               11 |             32 |         2.91 |
+|  count_reg[17]              | MCU/memory/memory_reg_mux_sel_reg_7_12 | MCU/memory/memory_reg_mux_sel_reg_7_11   |               15 |             32 |         2.13 |
+|  count_reg[17]              | MCU/memory/E[0]                        | BTNC_IBUF                                |               21 |             32 |         1.52 |
+|  count_reg[17]              | MCU/CU_FSM/state_reg[1]_1[0]           |                                          |               20 |             32 |         1.60 |
+|  count_reg[17]              | MCU/memory/p_0_in                      |                                          |               12 |             96 |         8.00 |
++-----------------------------+----------------------------------------+------------------------------------------+------------------+----------------+--------------+
+
+
