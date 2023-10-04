@@ -1,0 +1,31 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ArithLogicUnit.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/BCD.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CSR.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CU_Decoder.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ProgCount.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/SevSegDisp.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/debounce_one_shot.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/programmer.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/registerFile.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv" \
+"../../../../Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/simTemplate.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

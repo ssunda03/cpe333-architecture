@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Oct  3 13:52:29 2023
+# Process ID: 25624
+# Current directory: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper_Programmable.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper_Programmable.tcl
+# Log file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1/OTTER_Wrapper_Programmable.vds
+# Journal file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source OTTER_Wrapper_Programmable.tcl -notrace

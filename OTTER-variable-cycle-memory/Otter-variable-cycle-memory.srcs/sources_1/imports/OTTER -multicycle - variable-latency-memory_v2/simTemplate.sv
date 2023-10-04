@@ -28,16 +28,11 @@ module simTemplate(
    
     OTTER_Wrapper_Programmable DUT(.*);
 
-    initial forever  #10  CLK =  ! CLK; 
+    initial forever  #5  CLK =  ! CLK; 
    
     
     initial begin
-        BTNC=1;
-        #600 
-        BTNC=0;
-        SWITCHES=15'd0;
-
-      //$finish;
+      BTNC = 0;
     end
     
     

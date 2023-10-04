@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1'
+HD_PWD='C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

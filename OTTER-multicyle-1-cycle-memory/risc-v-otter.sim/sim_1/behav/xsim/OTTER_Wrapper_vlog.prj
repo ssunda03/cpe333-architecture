@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../risc-v-otter.srcs/clk_2n_div_test_v1_01.v" \
+
+sv xil_defaultlib  \
+"../../../../risc-v-otter.srcs/ArithLogicUnit.sv" \
+"../../../../risc-v-otter.srcs/peripherals/BCD.sv" \
+"../../../../risc-v-otter.srcs/CSR.sv" \
+"../../../../risc-v-otter.srcs/CU_Decoder.sv" \
+"../../../../risc-v-otter.srcs/peripherals/CathodeDriver.sv" \
+"../../../../risc-v-otter.srcs/ControlUnit.sv" \
+"../../../../risc-v-otter.srcs/Mult4to1.sv" \
+"../../../../risc-v-otter.srcs/OTTER_CPU.sv" \
+"../../../../risc-v-otter.srcs/ProgCount.sv" \
+"../../../../risc-v-otter.srcs/peripherals/SevSegDisp.sv" \
+"../../../../risc-v-otter.srcs/bram_dualport.sv" \
+"../../../../risc-v-otter.srcs/peripherals/debounce_one_shot.sv" \
+"../../../../risc-v-otter.srcs/registerFile.sv" \
+"../../../../risc-v-otter.srcs/OTTER_Wrapper.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

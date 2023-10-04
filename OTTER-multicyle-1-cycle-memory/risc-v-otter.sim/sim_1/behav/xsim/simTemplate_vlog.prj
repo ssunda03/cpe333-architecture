@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../risc-v-otter.srcs/ArithLogicUnit.sv" \
+"../../../../risc-v-otter.srcs/CSR.sv" \
+"../../../../risc-v-otter.srcs/CU_Decoder.sv" \
+"../../../../risc-v-otter.srcs/ControlUnit.sv" \
+"../../../../risc-v-otter.srcs/Mult4to1.sv" \
+"../../../../risc-v-otter.srcs/OTTER_CPU.sv" \
+"../../../../risc-v-otter.srcs/ProgCount.sv" \
+"../../../../risc-v-otter.srcs/bram_dualport.sv" \
+"../../../../risc-v-otter.srcs/registerFile.sv" \
+"../../../../risc-v-otter.srcs/sim_1/imports/OTTER -multicycle - variable-latency-memory_v2/simTemplate.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

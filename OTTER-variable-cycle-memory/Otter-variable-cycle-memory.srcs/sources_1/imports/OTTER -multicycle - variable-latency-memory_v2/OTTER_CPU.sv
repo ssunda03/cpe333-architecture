@@ -154,7 +154,7 @@ module OTTER_MCU(input CLK,
     );
     slow_ram #(
         .RAM_DEPTH(2**14),   //2**14 ->  16384 words * 4bytes = 64KB     //for 2**12 -> 4096 blocks * 16 bytes/block = 64KiB 
-        .INIT_FILENAME("otter_memory.mem")  // load 16-byte blocks
+        .INIT_FILENAME("matmul3x3.mem")  // load 16-byte blocks
     ) ram (
         .clk(CLK), .mhub1(mhub1_to_memory1), .mhub2(mhub2_to_memory2)
     );

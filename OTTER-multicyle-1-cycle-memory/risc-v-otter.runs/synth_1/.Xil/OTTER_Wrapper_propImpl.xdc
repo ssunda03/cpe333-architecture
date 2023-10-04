@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc rfile:../../../risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc rfile:../../../risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports CLK]
 set_property src_info {type:XDC file:1 line:12 export:INPUT save:INPUT read:READ} [current_design]

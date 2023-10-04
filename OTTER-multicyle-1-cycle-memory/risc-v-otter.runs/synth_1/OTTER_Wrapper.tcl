@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.tcl"
+  variable script "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,40 +70,42 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.cache/wt [current_project]
-set_property parent.project_path C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.cache/wt [current_project]
+set_property parent.project_path C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.cache/ip [current_project]
+set_property ip_output_repo c:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/mem/otter_memory.mem
-read_verilog -library xil_defaultlib -sv {
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv
-  C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv
+read_mem {
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/mem/otter_memory.mem
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/sources_1/imports/cpe333-architecture/matmul3x3.mem
 }
-read_verilog -library xil_defaultlib C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v
+read_verilog -library xil_defaultlib -sv {
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv
+}
+read_verilog -library xil_defaultlib C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -113,8 +115,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc
-set_property used_in_implementation false [get_files C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
+read_xdc C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc
+set_property used_in_implementation false [get_files C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

@@ -2,12 +2,12 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Sep 27 13:48:25 2023
-# Process ID: 19056
-# Current directory: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1
+# Start of session at: Tue Oct  3 20:53:22 2023
+# Process ID: 29556
+# Current directory: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1
 # Command line: vivado.exe -log OTTER_Wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper.tcl
-# Log file: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.vds
-# Journal file: C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1\vivado.jou
+# Log file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.vds
+# Journal file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source OTTER_Wrapper.tcl -notrace
 Command: synth_design -top OTTER_Wrapper -part xc7a35tcpg236-1
@@ -17,11 +17,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21268
+INFO: [Synth 8-7075] Helper process launched with PID 24964
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1108.562 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:23]
 	Parameter SWITCHES_AD bound to: 285212672 - type: integer 
 	Parameter VGA_READ_AD bound to: 285474816 - type: integer 
 	Parameter LEDS_AD bound to: 285736960 - type: integer 
@@ -31,100 +31,100 @@ INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper' [C:/Users/srini/Documen
 	Parameter UART_DATA_AD bound to: 286785536 - type: integer 
 	Parameter UART_RDY_AD bound to: 287047680 - type: integer 
 	Parameter KEYBOARD_AD bound to: 287309824 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'ProgCount' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'ProgCount' (1#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'Mult6to1' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:21]
-INFO: [Synth 8-6155] done synthesizing module 'Mult6to1' (2#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:21]
-INFO: [Synth 8-6157] synthesizing module 'Mult4to1' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:52]
-INFO: [Synth 8-6155] done synthesizing module 'Mult4to1' (3#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:52]
-INFO: [Synth 8-6157] synthesizing module 'Mult2to1' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:65]
-INFO: [Synth 8-6155] done synthesizing module 'Mult2to1' (4#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:65]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_ALU' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv:22]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_ALU' (5#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv:22]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_registerFile' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_registerFile' (6#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_mem_byte' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:97]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'ProgCount' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ProgCount' (1#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ProgCount.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Mult6to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:21]
+INFO: [Synth 8-6155] done synthesizing module 'Mult6to1' (2#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:21]
+INFO: [Synth 8-6157] synthesizing module 'Mult4to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:52]
+INFO: [Synth 8-6155] done synthesizing module 'Mult4to1' (3#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:52]
+INFO: [Synth 8-6157] synthesizing module 'Mult2to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:65]
+INFO: [Synth 8-6155] done synthesizing module 'Mult2to1' (4#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/Mult4to1.sv:65]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_ALU' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_ALU' (5#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ArithLogicUnit.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_registerFile' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_registerFile' (6#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/registerFile.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_mem_byte' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:97]
 	Parameter ACTUAL_WIDTH bound to: 14 - type: integer 
 	Parameter NUM_COL bound to: 4 - type: integer 
 	Parameter COL_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'otter_memory.mem' is read successfully [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:132]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:214]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:200]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_mem_byte' (7#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:97]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_Decoder' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_Decoder' (8#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_FSM' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:23]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:93]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_FSM' (9#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'CSR' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:21]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:53]
-INFO: [Synth 8-6155] done synthesizing module 'CSR' (10#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:21]
-WARNING: [Synth 8-7071] port 'intRet' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
-WARNING: [Synth 8-7071] port 'mstatus' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
-WARNING: [Synth 8-7023] instance 'CSRs' of module 'CSR' has 13 connections declared, but only 11 given [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (11#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'BCD' (12#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:19]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:41]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:44]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:66]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:88]
-INFO: [Synth 8-226] default block is never used [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:110]
-INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (13#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:19]
-INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (14#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'debounce_one_shot' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv:25]
-INFO: [Synth 8-6155] done synthesizing module 'debounce_one_shot' (15#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv:25]
-INFO: [Synth 8-6157] synthesizing module 'clk_2n_div_test' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v:39]
+INFO: [Synth 8-3876] $readmem data file 'matmul3x3.mem' is read successfully [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:132]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:214]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:200]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_mem_byte' (7#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/bram_dualport.sv:97]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_Decoder' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_Decoder' (8#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CU_Decoder.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_FSM' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:23]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:93]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_FSM' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/ControlUnit.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:21]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (10#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/CSR.sv:21]
+WARNING: [Synth 8-7071] port 'intRet' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
+WARNING: [Synth 8-7071] port 'mstatus' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
+WARNING: [Synth 8-7023] instance 'CSRs' of module 'CSR' has 13 connections declared, but only 11 given [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:112]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (11#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_CPU.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'BCD' (12#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/BCD.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:19]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:41]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:44]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:66]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:110]
+INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (13#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/CathodeDriver.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (14#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/SevSegDisp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce_one_shot' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_one_shot' (15#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/peripherals/debounce_one_shot.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'clk_2n_div_test' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v:39]
 	Parameter n bound to: 17 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clk_2n_div_test' (16#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v:39]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:131]
-INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (17#1) [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'clk_2n_div_test' (16#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/clk_2n_div_test_v1_01.v:39]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:131]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper' (17#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/OTTER_Wrapper.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1163.645 ; gain = 55.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1163.645 ; gain = 55.082
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1163.645 ; gain = 55.082
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.049 . Memory (MB): peak = 1163.645 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
-Finished Parsing XDC File [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
+Parsing XDC File [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
+Finished Parsing XDC File [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.srcs/constrs_1/Basys3_constraints-1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/OTTER_Wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/OTTER_Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1280.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1280.559 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1280.559 ; gain = 171.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1280.559 ; gain = 171.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1280.559 ; gain = 171.996
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'OTTER_CU_FSM'
 INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'debounce_one_shot'
@@ -156,7 +156,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'debounce_one_shot'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1280.559 ; gain = 171.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -258,7 +258,7 @@ INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of 
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MCU/memory/memory_reg"
 INFO: [Synth 8-7030] Implemented Non-Cascaded Block Ram (cascade_height = 1) of width 32 for RAM "MCU/memory/memory_reg"
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1003.457 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1280.559 ; gain = 171.996
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -300,13 +300,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1012.301 ; gain = 8.844
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1302.629 ; gain = 194.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1034.312 ; gain = 30.855
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1324.426 ; gain = 215.863
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -366,7 +366,7 @@ INFO: [Synth 8-7052] The timing for the instance MCU/memory/memory_reg_bram_22 (
 INFO: [Synth 8-7052] The timing for the instance MCU/memory/memory_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance MCU/memory/memory_reg_bram_23 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1117.480 ; gain = 114.023
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1407.520 ; gain = 298.957
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -384,37 +384,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -443,25 +443,25 @@ Report Cell Usage:
 |11    |MUXF8    |    52|
 |12    |RAM32M   |    12|
 |13    |RAMB36E1 |    16|
-|18    |FDRE     |   250|
-|19    |FDSE     |     4|
-|20    |IBUF     |    19|
-|21    |OBUF     |    28|
-|22    |OBUFT    |    11|
+|15    |FDRE     |   250|
+|16    |FDSE     |     4|
+|17    |IBUF     |    19|
+|18    |OBUF     |    28|
+|19    |OBUFT    |    11|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1420.375 ; gain = 311.812
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1130.328 ; gain = 126.871
-Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 1130.328 ; gain = 126.871
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 1420.375 ; gain = 194.898
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1420.375 ; gain = 311.812
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 1130.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1420.375 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 313 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1130.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1420.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
@@ -469,7 +469,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 127 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 1130.328 ; gain = 126.871
-INFO: [Common 17-1381] The checkpoint 'C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 1420.375 ; gain = 311.812
+INFO: [Common 17-1381] The checkpoint 'C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-multicyle-1-cycle-memory/risc-v-otter.runs/synth_1/OTTER_Wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_utilization_synth.rpt -pb OTTER_Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 27 13:49:16 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  3 20:54:19 2023...

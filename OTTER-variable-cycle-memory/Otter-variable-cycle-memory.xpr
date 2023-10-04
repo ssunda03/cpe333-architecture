@@ -44,7 +44,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTXSimLaunchSim" Val="14"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -73,45 +73,8 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv"/>
-          <Attr Name="ImportTime" Val="1594224128"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/dcache.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/dcache.sv"/>
-          <Attr Name="ImportTime" Val="1581623922"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/icache.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/icache.sv"/>
-          <Attr Name="ImportTime" Val="1581623944"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/cache_testbench.sv">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/cache_testbench.sv"/>
-          <Attr Name="ImportTime" Val="1581607906"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ArithLogicUnit.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/ArithLogicUnit.sv"/>
           <Attr Name="ImportTime" Val="1579057990"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -121,7 +84,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/BCD.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/BCD.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -131,7 +93,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CSR.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/CSR.sv"/>
           <Attr Name="ImportTime" Val="1579057990"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -141,7 +102,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CU_Decoder.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/CU_Decoder.sv"/>
           <Attr Name="ImportTime" Val="1581594720"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -151,7 +111,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -161,7 +120,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv"/>
           <Attr Name="ImportTime" Val="1593981208"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -171,7 +129,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv"/>
           <Attr Name="ImportTime" Val="1579069334"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -179,9 +136,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv"/>
+          <Attr Name="ImportTime" Val="1594224128"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv"/>
           <Attr Name="ImportTime" Val="1594224230"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -189,19 +154,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv"/>
-          <Attr Name="ImportTime" Val="1594188570"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ProgCount.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/ProgCount.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -211,7 +165,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/SevSegDisp.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/SevSegDisp.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -221,7 +174,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/debounce_one_shot.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/debounce_one_shot.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -231,7 +183,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv"/>
           <Attr Name="ImportTime" Val="1594241800"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -241,7 +192,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/programmer.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/programmer.sv"/>
           <Attr Name="ImportTime" Val="1594228788"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -251,9 +201,71 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/registerFile.sv">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/registerFile.sv"/>
           <Attr Name="ImportTime" Val="1579057992"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv"/>
+          <Attr Name="ImportTime" Val="1594223720"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv"/>
+          <Attr Name="ImportTime" Val="1552975666"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv"/>
+          <Attr Name="ImportTime" Val="1558501994"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv"/>
+          <Attr Name="ImportTime" Val="1552975618"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv"/>
+          <Attr Name="ImportTime" Val="1558501988"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv"/>
+          <Attr Name="ImportTime" Val="1594023754"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv"/>
+          <Attr Name="ImportTime" Val="1594188570"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -269,11 +281,31 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv">
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/dcache.sv">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv"/>
-          <Attr Name="ImportTime" Val="1594223720"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/dcache.sv"/>
+          <Attr Name="ImportTime" Val="1581623922"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/icache.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/icache.sv"/>
+          <Attr Name="ImportTime" Val="1581623944"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/cache_testbench.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/cache_testbench.sv"/>
+          <Attr Name="ImportTime" Val="1581607906"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -299,56 +331,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv"/>
-          <Attr Name="ImportTime" Val="1552975666"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv"/>
-          <Attr Name="ImportTime" Val="1558501994"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv"/>
-          <Attr Name="ImportTime" Val="1552975618"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv"/>
-          <Attr Name="ImportTime" Val="1558501988"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv"/>
-          <Attr Name="ImportTime" Val="1594023754"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/otter_memory.mem">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../OTTER -multicycle - variable-latency-memory_v2/otter_memory.mem"/>
@@ -365,10 +347,65 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul50x50.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matmul50x50.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul10x10.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matmul10x10.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul3x3.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matmul3x3.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matadd10x10.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matadd10x10.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matadd3x3.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matadd3x3.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matadd50x50.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../matadd50x50.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/mulint.mem">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../mulint.mem"/>
+          <Attr Name="ImportTime" Val="1696298884"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="cache_testbench"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="OTTER_Wrapper_Programmable"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -378,11 +415,16 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/simTemplate_behav.wcfg">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="cache_testbench"/>
+        <Option Name="TopModule" Val="simTemplate"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
         <Option Name="SelectedSimModel" Val="rtl"/>
@@ -391,6 +433,8 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/simTemplate_behav.wcfg"/>
+        <Option Name="xsim.simulate.runtime" Val="100ms"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
@@ -419,22 +463,19 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -445,6 +486,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

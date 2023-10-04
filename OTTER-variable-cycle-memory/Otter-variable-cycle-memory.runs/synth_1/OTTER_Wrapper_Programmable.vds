@@ -1,0 +1,566 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Oct  3 13:52:29 2023
+# Process ID: 25624
+# Current directory: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1
+# Command line: vivado.exe -log OTTER_Wrapper_Programmable.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source OTTER_Wrapper_Programmable.tcl
+# Log file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1/OTTER_Wrapper_Programmable.vds
+# Journal file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source OTTER_Wrapper_Programmable.tcl -notrace
+Command: synth_design -top OTTER_Wrapper_Programmable -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 2480
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1088.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'OTTER_Wrapper_Programmable' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv:33]
+	Parameter SWITCHES_AD bound to: 285212672 - type: integer 
+	Parameter CLKCNTLO_AD bound to: 289406976 - type: integer 
+	Parameter CLKCNTHI_AD bound to: 289406980 - type: integer 
+	Parameter LEDS_AD bound to: 285736960 - type: integer 
+	Parameter SSEG_AD bound to: 285999104 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (0#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_MCU' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'ProgCount' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ProgCount.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'ProgCount' (1#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ProgCount.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'Mult6to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'Mult6to1' (2#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'Mult4to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'Mult4to1' (3#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'Mult2to1' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:68]
+INFO: [Synth 8-6155] done synthesizing module 'Mult2to1' (4#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/Mult4to1.sv:68]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_ALU' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ArithLogicUnit.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_ALU' (5#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ArithLogicUnit.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_registerFile' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/registerFile.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_registerFile' (6#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/registerFile.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_Decoder' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CU_Decoder.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_Decoder' (7#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CU_Decoder.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'OTTER_CU_FSM' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv:25]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv:99]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_CU_FSM' (8#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/ControlUnit.sv:25]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CSR.sv:21]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CSR.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CSR.sv:21]
+WARNING: [Synth 8-7071] port 'intRet' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv:125]
+WARNING: [Synth 8-7071] port 'mstatus' of module 'CSR' is unconnected for instance 'CSRs' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv:125]
+WARNING: [Synth 8-7023] instance 'CSRs' of module 'CSR' has 13 connections declared, but only 11 given [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv:125]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_ro' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_ro' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_ro' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:35]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_ro' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:35]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (9#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'programmer' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/programmer.sv:28]
+	Parameter CLK_RATE bound to: 50 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter IB_TIMEOUT bound to: 200 - type: integer 
+	Parameter WAIT_TIMEOUT bound to: 500 - type: integer 
+	Parameter TIMEOUT_CLKS bound to: 25000000 - type: integer 
+	Parameter CMD_RESET_ON bound to: 24'b000011111111000000000000 
+	Parameter CMD_RESET_OFF bound to: 24'b000011111111000000000001 
+	Parameter CMD_WRITE_MEM bound to: 24'b000011111111000000000010 
+	Parameter FAIL_RESPONSE bound to: -267390961 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_rx_word' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv:23]
+	Parameter CLK_RATE bound to: 50 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+	Parameter IB_TIMEOUT bound to: 200 - type: integer 
+	Parameter TIMEOUT_CLKS bound to: 10000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_rx' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv:20]
+	Parameter CLKS_PER_BIT bound to: 434 - type: integer 
+	Parameter CNT_SIZE bound to: 9 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_RX_START_BIT bound to: 3'b001 
+	Parameter s_RX_DATA_BITS bound to: 3'b010 
+	Parameter s_RX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (10#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'uart_rx_word' (11#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_rx_word.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'uart_tx_word' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv:23]
+	Parameter CLK_RATE bound to: 50 - type: integer 
+	Parameter BAUD bound to: 115200 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'uart_tx' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv:20]
+	Parameter CLKS_PER_BIT bound to: 434 - type: integer 
+	Parameter CNT_SIZE bound to: 9 - type: integer 
+	Parameter s_IDLE bound to: 3'b000 
+	Parameter s_TX_START_BIT bound to: 3'b001 
+	Parameter s_TX_DATA_BITS bound to: 3'b010 
+	Parameter s_TX_STOP_BIT bound to: 3'b011 
+	Parameter s_CLEANUP bound to: 3'b100 
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (12#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx.sv:20]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tx_word' (13#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/uart_tx_word.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/programmer.sv:145]
+INFO: [Synth 8-6155] done synthesizing module 'programmer' (14#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/programmer.sv:28]
+INFO: [Synth 8-6157] synthesizing module 'memory_hub' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (14#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'axi_bus_rw' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bus_rw' (14#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_interfaces.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'size_translator' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:66]
+INFO: [Synth 8-6155] done synthesizing module 'size_translator' (15#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:66]
+INFO: [Synth 8-6157] synthesizing module 'merge_controllers' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:168]
+INFO: [Synth 8-6155] done synthesizing module 'merge_controllers' (16#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:168]
+INFO: [Synth 8-6157] synthesizing module 'split_devices' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:236]
+INFO: [Synth 8-6155] done synthesizing module 'split_devices' (17#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:236]
+INFO: [Synth 8-6155] done synthesizing module 'memory_hub' (18#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/memory_hub.sv:27]
+INFO: [Synth 8-6157] synthesizing module 'slow_ram' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv:27]
+	Parameter MEM_DELAY bound to: 10 - type: integer 
+	Parameter RAM_DEPTH bound to: 16384 - type: integer 
+	Parameter INIT_FILENAME bound to: matmul3x3.mem - type: string 
+INFO: [Synth 8-6157] synthesizing module 'delay_access' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv:65]
+	Parameter PORT_NAME bound to: Data - type: string 
+	Parameter MEM_DELAY bound to: 10 - type: integer 
+	Parameter CNT_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'delay_access' (19#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv:65]
+INFO: [Synth 8-6157] synthesizing module 'xilinx_bram_tdp_nc_nr' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv:29]
+	Parameter ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter RAM_DEPTH bound to: 16384 - type: integer 
+	Parameter INIT_FILENAME bound to: matmul3x3.mem - type: string 
+INFO: [Synth 8-3876] $readmem data file 'matmul3x3.mem' is read successfully [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv:50]
+INFO: [Synth 8-6155] done synthesizing module 'xilinx_bram_tdp_nc_nr' (20#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/xilinx_bram_tdp_nc_nr.sv:29]
+INFO: [Synth 8-6155] done synthesizing module 'slow_ram' (21#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/slow_ram.sv:27]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_MCU' (22#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_CPU.sv:31]
+INFO: [Synth 8-6157] synthesizing module 'SevSegDisp' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/SevSegDisp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'BCD' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/BCD.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'BCD' (23#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/BCD.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'CathodeDriver' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:19]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:41]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:44]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:66]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:88]
+INFO: [Synth 8-226] default block is never used [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:110]
+INFO: [Synth 8-6155] done synthesizing module 'CathodeDriver' (24#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/CathodeDriver.sv:19]
+INFO: [Synth 8-6155] done synthesizing module 'SevSegDisp' (25#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/SevSegDisp.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce_one_shot' [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/debounce_one_shot.sv:25]
+INFO: [Synth 8-6155] done synthesizing module 'debounce_one_shot' (26#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/debounce_one_shot.sv:25]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv:105]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'OTTER_Wrapper_Programmable' (27#1) [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.srcs/sources_1/imports/OTTER -multicycle - variable-latency-memory_v2/OTTER_Wrapper.sv:33]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1088.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1088.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1088.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'OTTER_CU_FSM'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_rx_word'
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'uart_tx'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'uart_tx_word'
+INFO: [Synth 8-802] inferred FSM for state register 'r_state_reg' in module 'programmer'
+INFO: [Synth 8-802] inferred FSM for state register 'PS_reg' in module 'debounce_one_shot'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   FETCH |                             0010 |                               00
+                 EXECUTE |                             1000 |                               01
+                      WB |                             0100 |                               10
+                   INTER |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'OTTER_CU_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            WAIT_RX_BYTE |                                0 | 00000000000000000000000000000000
+             OUTPUT_WORD |                                1 | 00000000000000000000000000000001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'uart_rx_word'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_IDLE |                              000 |                              000
+          s_TX_START_BIT |                              001 |                              001
+          s_TX_DATA_BITS |                              010 |                              010
+           s_TX_STOP_BIT |                              011 |                              011
+               s_CLEANUP |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'uart_tx'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 | 00000000000000000000000000000000
+              WAIT_START |                             0010 | 00000000000000000000000000000001
+            INIT_TX_BYTE |                             0100 | 00000000000000000000000000000010
+            WAIT_TX_BYTE |                             1000 | 00000000000000000000000000000011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'uart_tx_word'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 | 00000000000000000000000000000000
+            WM_WAIT_ADDR |                              001 | 00000000000000000000000000000010
+             WM_WAIT_LEN |                              010 | 00000000000000000000000000000011
+            WM_WAIT_DATA |                              011 | 00000000000000000000000000000100
+                  FAILED |                              100 | 00000000000000000000000000000001
+                 WM_DONE |                              101 | 00000000000000000000000000000101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_state_reg' using encoding 'sequential' in module 'programmer'
+INFO: [Synth 8-3971] The signal "xilinx_bram_tdp_nc_nr:/r_ram_reg" was recognized as a true dual port RAM template.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ST_init |                              000 | 00000000000000000000000000000000
+              ST_BTN_low |                              001 | 00000000000000000000000000000001
+      ST_BTN_low_to_high |                              010 | 00000000000000000000000000000010
+             ST_BTN_high |                              011 | 00000000000000000000000000000011
+      ST_BTN_high_to_low |                              100 | 00000000000000000000000000000100
+             ST_one_shot |                              101 | 00000000000000000000000000000101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'PS_reg' using encoding 'sequential' in module 'debounce_one_shot'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1088.941 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   25 Bit       Adders := 1     
+	   2 Input   20 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 35    
+	   2 Input    3 Bit       Adders := 9     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 2     
+	   4 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 11    
+	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 5     
+	                4 Bit    Registers := 4     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 17    
++---Multipliers : 
+	              32x32  Multipliers := 1     
++---RAMs : 
+	             512K Bit	(16384 X 32 bit)          RAMs := 1     
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 27    
+	   4 Input   32 Bit        Muxes := 7     
+	   5 Input   32 Bit        Muxes := 2     
+	   2 Input   25 Bit        Muxes := 2     
+	   4 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 5     
+	   2 Input    9 Bit        Muxes := 2     
+	   6 Input    9 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 1     
+	  19 Input    8 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 43    
+	   4 Input    4 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 35    
+	   5 Input    3 Bit        Muxes := 3     
+	   6 Input    3 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 2     
+	   6 Input    2 Bit        Muxes := 1     
+	   5 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 7     
+	   3 Input    2 Bit        Muxes := 1     
+	   7 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 17    
+	   2 Input    1 Bit        Muxes := 63    
+	   6 Input    1 Bit        Muxes := 20    
+	   3 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP ALUOut0, operation Mode is: A*B.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: Generating DSP ALUOut0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: Generating DSP ALUOut0, operation Mode is: A*B.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: Generating DSP ALUOut0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+DSP Report: operator ALUOut0 is absorbed into DSP ALUOut0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.703 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping	Report (see note below)
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|MCU/ram     | bram/r_ram_reg | 16 K x 32(NO_CHANGE)   | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++------------+------------+-----------+----------------------+--------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------+-----------+----------------------+--------------+
+|MCU/RF      | RF_reg     | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping	Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|OTTER_ALU   | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|OTTER_ALU   | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|OTTER_ALU   | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|OTTER_ALU   | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.703 ; gain = 37.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping	Report
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|MCU/ram     | bram/r_ram_reg | 16 K x 32(NO_CHANGE)   | W | R | 16 K x 32(WRITE_FIRST) |   | R | Port A and B     | 0      | 16     | 
++------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping	Report
++------------+------------+-----------+----------------------+--------------+
+|Module Name | RTL Object | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------+-----------+----------------------+--------------+
+|MCU/RF      | RF_reg     | Implied   | 32 x 32              | RAM32M x 12	 | 
++------------+------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_4 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_7 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_8 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_9 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_10 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_11 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_12 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_13 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_14 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance MCU/ram/bram/r_ram_reg_15 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1150.656 ; gain = 61.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |   125|
+|3     |DSP48E1  |     3|
+|4     |LUT1     |    13|
+|5     |LUT2     |   197|
+|6     |LUT3     |   144|
+|7     |LUT4     |   249|
+|8     |LUT5     |   290|
+|9     |LUT6     |   958|
+|10    |MUXF7    |    39|
+|11    |RAM32M   |    12|
+|12    |RAMB36E1 |    16|
+|13    |FDRE     |   641|
+|14    |FDSE     |     6|
+|15    |IBUF     |    20|
+|16    |OBUF     |    29|
++------+---------+------+
+
+Report Instance Areas: 
++------+-------------------+----------------------+------+
+|      |Instance           |Module                |Cells |
++------+-------------------+----------------------+------+
+|1     |top                |                      |  2744|
+|2     |  DB_I             |debounce_one_shot     |    37|
+|3     |  DB_R             |debounce_one_shot_0   |    34|
+|4     |  MCU              |OTTER_MCU             |  2385|
+|5     |    ALU            |OTTER_ALU             |    22|
+|6     |    ALUAinput      |Mult2to1              |   106|
+|7     |    ALUBinput      |Mult4to1              |    38|
+|8     |    CSRs           |CSR                   |    73|
+|9     |    CU_FSM         |OTTER_CU_FSM          |     6|
+|10    |    PC             |ProgCount             |   115|
+|11    |    PCdatasrc      |Mult6to1              |    96|
+|12    |    RF             |OTTER_registerFile    |   156|
+|13    |    mhub           |memory_hub            |   100|
+|14    |      merge        |merge_controllers     |    46|
+|15    |      split        |split_devices         |     1|
+|16    |      trans        |size_translator       |    53|
+|17    |    programmer     |programmer            |   683|
+|18    |      uart_rx_word |uart_rx_word          |   377|
+|19    |        uart_rx    |uart_rx               |   105|
+|20    |      uart_tx_word |uart_tx_word          |   154|
+|21    |        uart_tx    |uart_tx               |    58|
+|22    |    ram            |slow_ram              |   903|
+|23    |      bram         |xilinx_bram_tdp_nc_nr |   835|
+|24    |      delay_ramd   |delay_access          |    68|
+|25    |    regWriteback   |Mult4to1_1            |    86|
+|26    |  SSG_DISP         |SevSegDisp            |    88|
+|27    |    CathMod        |CathodeDriver         |    88|
++------+-------------------+----------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 3 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1164.277 ; gain = 75.336
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 1176.410 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 195 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1202.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 12 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+139 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1202.398 ; gain = 113.457
+INFO: [Common 17-1381] The checkpoint 'C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/OTTER-variable-cycle-memory/Otter-variable-cycle-memory.runs/synth_1/OTTER_Wrapper_Programmable.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file OTTER_Wrapper_Programmable_utilization_synth.rpt -pb OTTER_Wrapper_Programmable_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  3 13:53:06 2023...

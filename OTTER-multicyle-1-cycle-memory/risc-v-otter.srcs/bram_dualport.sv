@@ -129,7 +129,7 @@ module OTTER_mem_dualport(MEM_CLK,MEM_ADDR1,MEM_ADDR2,MEM_DIN2,MEM_WRITE2,MEM_RE
     (* ram_decomp = "power" *) logic [31:0] memory [0:2**ACTUAL_WIDTH-1];
     
     initial begin
-        $readmemh("otter_memory.mem", memory, 0, 2**ACTUAL_WIDTH-1);
+        $readmemh("matmul3x3.mem", memory, 0, 2**ACTUAL_WIDTH-1);
     end 
     
 
