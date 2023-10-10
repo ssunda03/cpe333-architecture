@@ -1,0 +1,5 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+GDR: Grader Running
+GDR: Cleaning Up Grading Run...
+$finish called at time : 11380 ns : File "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/Lab1Verification/lab1_v2/Lab1_FIFO/Lab1_FIFO.srcs/sources_1/imports/fifo/verification/fifo_itf.sv" Line 20
