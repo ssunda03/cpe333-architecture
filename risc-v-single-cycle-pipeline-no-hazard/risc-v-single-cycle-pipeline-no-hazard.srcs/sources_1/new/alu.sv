@@ -21,20 +21,18 @@
 
 
 module alu(
-    input wire          alu_src_a,
-    input wire [1:0]    alu_src_b,
-    input wire [3:0]    alu_op,
+    input wire          alu_a_ctrl,
+    input wire          alu_b_ctrl,
+    input wire [3:0]    alu_ctrl,
     
-    input wire [31:0]   alu_a_reg,
-    input wire [31:0]   alu_a_imm_u,
+    input wire [31:0]   rs1,
+    input wire [31:0]   pc,
     
-    input wire [31:0]   alu_b_reg,
-    input wire [31:0]   alu_b_imm_i,
-    input wire [31:0]   alu_b_imm_s,
-    input wire [31:0]   alu_b_pc,
+    input wire [31:0]   rs2,
+    input wire [31:0]   imm,
     
     output wire         alu_zero,
-    output reg [31:0]   alu_out
+    output reg [31:0]   alu_res
     );
     parameter   alu_ADD     = 4'b0000,
                 alu_SLL     = 4'b0001,
@@ -52,28 +50,25 @@ module alu(
     wire [31:0] alu_a;
     wire [31:0] alu_b;
     
-    assign alu_zero = alu_out == 0;
-    assign alu_a = ~alu_src_a ? alu_a_reg : alu_a_imm_u;
-    assign alu_b = alu_src_b == 0 ? alu_b_reg :
-                   alu_src_b == 1 ? alu_b_imm_i :
-                   alu_src_b == 2 ? alu_b_imm_s : 
-                                    alu_b_pc    ;
+    assign alu_zero = alu_res == 0;
+    assign alu_a = ~alu_a_ctrl ? rs1 : pc;
+    assign alu_b = ~alu_b_ctrl ? rs2 : imm;
     
     always_comb begin
-        case (alu_op)
-            alu_ADD:    alu_out = alu_a + alu_b;
-            alu_SLL:    alu_out = alu_a << alu_b;
-            alu_SLT:    alu_out = $signed(alu_a) < $signed(alu_b) ? alu_a : alu_b;
-            alu_SLTU:   alu_out = $unsigned(alu_a) < $unsigned(alu_b) ? alu_a : alu_b;
-            alu_XOR:    alu_out = alu_a ^ alu_b;
-            alu_SRL:    alu_out = alu_a >> alu_b;
-            alu_OR:     alu_out = alu_a | alu_b;
-            alu_AND:    alu_out = alu_a & alu_b;
-            alu_SUB:    alu_out = alu_a - alu_b;
-            alu_LUI:    alu_out = alu_a;
-            alu_SRA:    alu_out = alu_a >>> alu_b;
+        case (alu_ctrl)
+            alu_ADD:    alu_res = alu_a + alu_b;
+            alu_SLL:    alu_res = alu_a << alu_b;
+            alu_SLT:    alu_res = $signed(alu_a) < $signed(alu_b) ? alu_a : alu_b;
+            alu_SLTU:   alu_res = $unsigned(alu_a) < $unsigned(alu_b) ? alu_a : alu_b;
+            alu_XOR:    alu_res = alu_a ^ alu_b;
+            alu_SRL:    alu_res = alu_a >> alu_b;
+            alu_OR:     alu_res = alu_a | alu_b;
+            alu_AND:    alu_res = alu_a & alu_b;
+            alu_SUB:    alu_res = alu_a - alu_b;
+            alu_LUI:    alu_res = alu_b;
+            alu_SRA:    alu_res = alu_a >>> alu_b;
             
-            default: alu_out = 'hDEADBEEF;
+            default: alu_res = 'hDEADBEEF;
         endcase
     end
 endmodule

@@ -21,38 +21,26 @@
 
 
 module imm_gen(
-    input wire [31:0]   imm_gen_instr,
-    
-    output wire [31:0] imm_gen_i,
-    output wire [31:0] imm_gen_s,
-    output wire [31:0] imm_gen_b,
-    output wire [31:0] imm_gen_u,
-    output wire [31:0] imm_gen_j
-    );
-    
-    
-    assign imm_gen_i = {{20{imm_gen_instr[31]}}, imm_gen_instr[31:20]};
-    assign imm_gen_s = {{20{imm_gen_instr[31]}}, imm_gen_instr[31:25], imm_gen_instr[11:7]};
-    assign imm_gen_b = {{20{imm_gen_instr[31]}}, imm_gen_instr[7], imm_gen_instr[30:25], imm_gen_instr[11:8], 1'b0};
-    assign imm_gen_u = {imm_gen_instr[31], imm_gen_instr[30:12], 12'b0};
-    assign imm_gen_j = {{12{imm_gen_instr[31]}}, imm_gen_instr[19:12], imm_gen_instr[20], imm_gen_instr[30:21], 1'b0};
-    
-endmodule
+    input wire [31:0]   instr,
+    input wire [2:0]    imm_ctrl,
 
-module branch_addr_gen(
-    input wire [31:0]   branch_addr_pc,
-    input wire [31:0]   branch_addr_reg,
-    input wire [31:0]   branch_addr_imm_i,
-    input wire [31:0]   branch_addr_imm_b,
-    input wire [31:0]   branch_addr_imm_j,
-    
-    output wire [31:0]  branch_addr_jalr,
-    output wire [31:0]  branch_addr_branch,
-    output wire [31:0]  branch_addr_jal,
+    output wire [31:0]  imm         
     );
+    wire [31:0]         imm_i,
+                        imm_s,
+                        imm_b,
+                        imm_u,
+                        imm_j;
+                        
+    assign imm_i = {{20{instr[31]}}, instr[31:20]};
+    assign imm_s = {{20{instr[31]}}, instr[31:25], instr[11:7]};
+    assign imm_b = {{20{instr[31]}}, instr[7], instr[30:25], instr[11:8], 1'b0};
+    assign imm_u = {instr[31], instr[30:12], 12'b0};
+    assign imm_j = {{12{instr[31]}}, instr[19:12], instr[20], instr[30:21], 1'b0};
     
-    assign branch_addr_jalr     = (branch_addr_reg + branch_addr_imm_i) & ~1;
-    assign branch_addr_branch   = branch_addr_pc + branch_addr_imm_b;
-    assign branch_addr_jal      = branch_addr_pc + branch_addr_imm_j;
-    
+    assign imm =    imm_ctrl == 0 ? imm_i :
+                    imm_ctrl == 1 ? imm_s : 
+                    imm_ctrl == 2 ? imm_b :
+                    imm_ctrl == 3 ? imm_u :
+                                    imm_j ;
 endmodule

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_alu_sv " />
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="88701fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="182"></NameColumnWidth>
+      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="23" />
+   <wvobject fp_name="/testbench/UUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/FETCH" type="array">
+      <obj_property name="ElementShortName">FETCH</obj_property>
+      <obj_property name="ObjectShortName">FETCH</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/DECODE" type="array">
+      <obj_property name="ElementShortName">DECODE</obj_property>
+      <obj_property name="ObjectShortName">DECODE</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/EXEC" type="array">
+      <obj_property name="ElementShortName">EXEC</obj_property>
+      <obj_property name="ObjectShortName">EXEC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/MEM" type="array">
+      <obj_property name="ElementShortName">MEM</obj_property>
+      <obj_property name="ObjectShortName">MEM</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/WRITE" type="array">
+      <obj_property name="ElementShortName">WRITE</obj_property>
+      <obj_property name="ObjectShortName">WRITE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/br_eq" type="logic">
+      <obj_property name="ElementShortName">br_eq</obj_property>
+      <obj_property name="ObjectShortName">br_eq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/br_lt" type="logic">
+      <obj_property name="ElementShortName">br_lt</obj_property>
+      <obj_property name="ObjectShortName">br_lt</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/br_ltu" type="logic">
+      <obj_property name="ElementShortName">br_ltu</obj_property>
+      <obj_property name="ObjectShortName">br_ltu</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/opcode" type="array">
+      <obj_property name="ElementShortName">opcode[6:0]</obj_property>
+      <obj_property name="ObjectShortName">opcode[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/func7" type="logic">
+      <obj_property name="ElementShortName">func7</obj_property>
+      <obj_property name="ObjectShortName">func7</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/func3" type="array">
+      <obj_property name="ElementShortName">func3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">func3[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/alu_fun" type="array">
+      <obj_property name="ElementShortName">alu_fun[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_fun[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/pcSource" type="array">
+      <obj_property name="ElementShortName">pcSource[1:0]</obj_property>
+      <obj_property name="ObjectShortName">pcSource[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/alu_srcA" type="array">
+      <obj_property name="ElementShortName">alu_srcA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_srcA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/alu_srcB" type="array">
+      <obj_property name="ElementShortName">alu_srcB[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_srcB[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/rf_wr_sel" type="array">
+      <obj_property name="ElementShortName">rf_wr_sel[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rf_wr_sel[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/imm_ctrl" type="array">
+      <obj_property name="ElementShortName">imm_ctrl[2:0]</obj_property>
+      <obj_property name="ObjectShortName">imm_ctrl[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/mem_we" type="logic">
+      <obj_property name="ElementShortName">mem_we</obj_property>
+      <obj_property name="ObjectShortName">mem_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/rf_we" type="logic">
+      <obj_property name="ElementShortName">rf_we</obj_property>
+      <obj_property name="ObjectShortName">rf_we</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/OPCODE" type="array">
+      <obj_property name="ElementShortName">OPCODE[6:0]</obj_property>
+      <obj_property name="ObjectShortName">OPCODE[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/UUT/CTRL_UNIT/FUNC3" type="array">
+      <obj_property name="ElementShortName">FUNC3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FUNC3[2:0]</obj_property>
+   </wvobject>
+</wave_config>

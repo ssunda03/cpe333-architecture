@@ -22,8 +22,7 @@
 
 module pc(
     input wire          clk,
-    input wire          rst, 
-    input wire          pc_we,
+    input wire          rst,
     
     input wire [1:0]    pc_ctrl,
     input wire [31:0]   pc_jalr,
@@ -31,24 +30,23 @@ module pc(
     input wire [31:0]   pc_jal,
     
     output reg [31:0]   pc,
-    output wire [31:0]  pc_plus_4
+    output wire [31:0]  pc_4
     );
     
     reg  [31:0] pc_next;
-    assign pc_plus_4 = pc + 4;
+    assign pc_4 = pc + 4;
     
     always_ff @(posedge clk) begin
         if (rst) pc <= 0;
-        else if (pc_we) pc <= pc_next;
+        else pc <= pc_next;
     end
     
     always_comb begin
         case (pc_ctrl)
-            0: pc_next = pc_plus_4;
+            0: pc_next = pc_4;
             1: pc_next = pc_jalr;
             2: pc_next = pc_branch;
             3: pc_next = pc_jal;
-            default: pc_next = 'hDEADBEEF;
         endcase
     end
     

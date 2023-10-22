@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/19/2023 11:33:34 AM
+// Create Date: 10/19/2023 11:26:51 AM
 // Design Name: 
-// Module Name: imem
+// Module Name: branch_addr_gen
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,12 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module imem(
-    input   wire [31:0] imem_a,
-    output  wire [31:0] imem_out
-    );
-    logic [31:0] RAM[63:0];
-    initial $readmemh("imem.mem",RAM);
+
+module branch_addr_gen(
+    input wire [31:0]   pc,
+    input wire [31:0]   rs1,
+    input wire [31:0]   imm,
     
-    assign imem_out = RAM[imem_a[31:2]];
+    output wire [31:0]  pc_jalr,
+    output wire [31:0]  pc_branch,
+    output wire [31:0]  pc_jal
+    );
+    
+    assign pc_jalr      = (rs1 + imm) & ~1;
+    assign pc_branch    = pc + imm;
+    assign pc_jal       = pc + imm;
+    
 endmodule

@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/19/2023 11:33:34 AM
+// Create Date: 10/21/2023 07:00:45 PM
 // Design Name: 
-// Module Name: imem
+// Module Name: testbench
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,12 +19,29 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module imem(
-    input   wire [31:0] imem_a,
-    output  wire [31:0] imem_out
+
+module testbench(
+
     );
-    logic [31:0] RAM[63:0];
-    initial $readmemh("imem.mem",RAM);
     
-    assign imem_out = RAM[imem_a[31:2]];
+    reg clk, rst;
+    
+    mcu UUT(
+        clk,
+        rst
+    );
+    
+    initial begin
+        clk = 0;
+        rst = 0;
+        forever #5 clk = ~clk;
+    end 
+    
+    initial begin
+        #4 rst = 1;
+        #5 rst = 0;
+        
+        #90 $finish();
+    end   
+    
 endmodule

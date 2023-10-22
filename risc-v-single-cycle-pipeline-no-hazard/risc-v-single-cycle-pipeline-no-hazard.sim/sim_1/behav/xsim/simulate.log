@@ -1,0 +1,3 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+$finish called at time : 99 ns : File "C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sim_1/new/testbench.sv" Line 44
