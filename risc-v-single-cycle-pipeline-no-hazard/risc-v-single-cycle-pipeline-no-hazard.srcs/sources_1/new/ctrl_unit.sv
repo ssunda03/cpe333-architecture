@@ -20,25 +20,25 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ctrl_unit(
-    input br_eq, 
+module ctrl_unit( //control unit for pipeline registers
+    input br_eq, //branch conditions
 	input br_lt, 
 	input br_ltu,
     input [6:0] opcode,   //-  ir[6:0]
 	input func7,          //-  ir[30]
     input [2:0] func3,    //-  ir[14:12]
-    output logic [3:0] alu_fun,
-    output logic [1:0] pcSource,
-    output logic [1:0] alu_srcA,
-    output logic [2:0] alu_srcB, 
-	output logic [1:0] rf_wr_sel,
-	output logic [2:0] imm_ctrl,
-	output logic	   mem_we,
-	output logic	   rf_we
+    output logic [3:0] alu_fun, //ALU operation
+    output logic [1:0] pcSource, // pc MUX selector
+    output logic alu_srcA, //ALU input selectors
+    output logic alu_srcB, 
+	output logic [1:0] rf_wr_sel, //regfile write selector
+	output logic [2:0] imm_ctrl, //immediate selector
+	output logic	   mem_we, //memory write enable
+	output logic	   rf_we //regfile write enable
 	);
     
     //- datatypes for RISC-V opcode types
-    typedef enum logic [6:0] {
+    typedef enum logic [6:0] { //instruction types
         LUI    = 7'b0110111,
         AUIPC  = 7'b0010111,
         JAL    = 7'b1101111,
@@ -71,8 +71,8 @@ module ctrl_unit(
     always_comb
     begin 
         //- schedule all values to avoid latch
-		pcSource = 2'b00;  alu_srcB = 1'b0;    rf_wr_sel = 2'b00; 
-		alu_srcA = 1'b0;   alu_fun  = 4'b0000; imm_ctrl = 3'b000; mem_we = 1'b0; rf_we = 1'b0;
+		pcSource = 2'b00;  alu_srcB = 0;    rf_wr_sel = 2'b00; 
+		alu_srcA = 0;   alu_fun  = 4'b0000; imm_ctrl = 3'b000; mem_we = 1'b0; rf_we = 1'b0;
 		
 		case(OPCODE)
 			AUIPC:
@@ -111,7 +111,7 @@ module ctrl_unit(
 				 rf_we = 1'b1;
 			end
 			
-			LOAD: 
+			LOAD: //load into regfile from memory
 			begin
 				alu_fun = 4'b0000; 
 				alu_srcA = 0;
@@ -121,7 +121,7 @@ module ctrl_unit(
 				rf_we = 1'b1;
 			end
 			
-			OP_IMM:
+			OP_IMM: //immediate arithmetic ops
 			begin
 			    alu_srcA = 0;
                 alu_srcB = 1;
@@ -142,7 +142,7 @@ module ctrl_unit(
 				endcase
 	        end
 		
-			BRANCH:
+			BRANCH: //branch instr
 			begin
 				 imm_ctrl = 2;
 
@@ -156,21 +156,21 @@ module ctrl_unit(
 			     endcase
 			end
 			
-			STORE:
-			begin
+			STORE: //store in memory
+			begin 
 				alu_fun = 4'b0000; 
 				alu_srcA = 0; 
-				alu_srcB = 2;
+				alu_srcB = 1;
 				imm_ctrl = 1;
 				mem_we = 1;
 			end
 			
-			OP_RG3:
+			OP_RG3: //non immediate arithmetic ops
 			begin
 			     alu_srcA = 0;
 			     alu_srcB = 0;
 			     rf_wr_sel = 3;
-				 rf_we = 1'b0;
+				 rf_we = 1'b1;
 
 			     case(func3)
                     3'b000: alu_fun = ~func7 ? 4'b0000 : 4'b1000; // ADD : SUB
@@ -187,9 +187,9 @@ module ctrl_unit(
 			default:
 			begin
 				 pcSource = 2'b00; 
-				 alu_srcB = 2'b00; 
+				 alu_srcB = 0; 
 				 rf_wr_sel = 2'b00; 
-				 alu_srcA = 1'b0; 
+				 alu_srcA = 0; 
 				 alu_fun = 4'b0000;
 				 imm_ctrl = 5;
 			end

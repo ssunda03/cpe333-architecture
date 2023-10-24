@@ -20,21 +20,21 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module alu(
-    input wire          alu_a_ctrl,
+module alu( //arithmetic logic unit
+    input wire          alu_a_ctrl, //input selectors
     input wire          alu_b_ctrl,
-    input wire [3:0]    alu_ctrl,
+    input wire [3:0]    alu_ctrl, //operation selector
     
-    input wire [31:0]   rs1,
+    input wire [31:0]   rs1, //inputs
     input wire [31:0]   pc,
     
     input wire [31:0]   rs2,
     input wire [31:0]   imm,
     
-    output wire         alu_zero,
+    output wire         alu_zero, //if zero
     output reg [31:0]   alu_res
     );
-    parameter   alu_ADD     = 4'b0000,
+    parameter   alu_ADD     = 4'b0000, //operations
                 alu_SLL     = 4'b0001,
                 alu_SLT     = 4'b0010,
                 alu_SLTU    = 4'b0011,
@@ -47,15 +47,15 @@ module alu(
                 alu_SRA     = 4'b1101;
                 
                 
-    wire [31:0] alu_a;
+    wire [31:0] alu_a; //inputs
     wire [31:0] alu_b;
     
     assign alu_zero = alu_res == 0;
-    assign alu_a = ~alu_a_ctrl ? rs1 : pc;
+    assign alu_a = ~alu_a_ctrl ? rs1 : pc; //selector of inputs based on instruction
     assign alu_b = ~alu_b_ctrl ? rs2 : imm;
     
     always_comb begin
-        case (alu_ctrl)
+        case (alu_ctrl) //perform operations
             alu_ADD:    alu_res = alu_a + alu_b;
             alu_SLL:    alu_res = alu_a << alu_b;
             alu_SLT:    alu_res = $signed(alu_a) < $signed(alu_b) ? alu_a : alu_b;

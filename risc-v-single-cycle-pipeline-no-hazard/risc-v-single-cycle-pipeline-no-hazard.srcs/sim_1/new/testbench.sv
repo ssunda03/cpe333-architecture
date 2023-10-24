@@ -41,7 +41,7 @@ module testbench(
         #4 rst = 1;
         #5 rst = 0;
         
-        #90 $finish();
+        #200 $finish();
     end   
     
 endmodule

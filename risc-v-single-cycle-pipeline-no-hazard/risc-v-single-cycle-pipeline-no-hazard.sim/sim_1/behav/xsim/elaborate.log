@@ -4,38 +4,7 @@ Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 031872f156
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 2 for port 'alu_srcA' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:96]
-WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'alu_srcB' [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:97]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:94]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:96]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:97]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:98]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:99]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:100]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:115]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:116]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:123]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:131]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:132]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:133]
-WARNING: [VRFC 10-3823] variable 'DECODE' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:135]
-WARNING: [VRFC 10-3823] variable 'EXEC' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:151]
-WARNING: [VRFC 10-3823] variable 'MEM' might have multiple concurrent drivers [C:/Users/srini/Documents/Vivado/CPE333/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:165]
+WARNING: [VRFC 10-3823] variable 'EXEC' might have multiple concurrent drivers [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:152]
+WARNING: [VRFC 10-3823] variable 'MEM' might have multiple concurrent drivers [C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv:166]
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.$unit_alu_sv
-Compiling module xil_defaultlib.pc
-Compiling module xil_defaultlib.imem
-Compiling module xil_defaultlib.branch_cond_gen
-Compiling module xil_defaultlib.ctrl_unit
-Compiling module xil_defaultlib.regfile
-Compiling module xil_defaultlib.imm_gen
-Compiling module xil_defaultlib.branch_addr_gen
-Compiling module xil_defaultlib.alu
-Compiling module xil_defaultlib.dmem
-Compiling module xil_defaultlib.mcu
-Compiling module xil_defaultlib.testbench
-Compiling module xil_defaultlib.glbl
-Built simulation snapshot testbench_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

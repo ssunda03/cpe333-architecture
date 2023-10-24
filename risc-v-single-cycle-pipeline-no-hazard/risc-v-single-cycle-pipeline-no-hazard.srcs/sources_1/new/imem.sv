@@ -19,12 +19,12 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module imem(
-    input   wire [31:0] imem_a,
-    output  wire [31:0] imem_out
+module imem( //instruction memory
+    input   wire [31:0] imem_a, //address to read from (set by PC)
+    output  wire [31:0] imem_out //instruct that has been read
     );
-    logic [31:0] RAM[63:0];
-    initial $readmemh("imem.mem",RAM);
+    logic [31:0] RAM[63:0]; //memory
+    initial $readmemh("imem.mem",RAM); //input program
     
-    assign imem_out = RAM[imem_a[31:2]];
+    assign imem_out = RAM[imem_a[31:2]]; //send out
 endmodule

@@ -20,29 +20,29 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pc(
+module pc( //program counter
     input wire          clk,
     input wire          rst,
     
-    input wire [1:0]    pc_ctrl,
-    input wire [31:0]   pc_jalr,
+    input wire [1:0]    pc_ctrl, //next instruction mux selector
+    input wire [31:0]   pc_jalr, //potential next addresses
     input wire [31:0]   pc_branch,
     input wire [31:0]   pc_jal,
     
-    output reg [31:0]   pc,
-    output wire [31:0]  pc_4
+    output reg [31:0]   pc, //current address
+    output wire [31:0]  pc_4 //address + 4
     );
     
-    reg  [31:0] pc_next;
-    assign pc_4 = pc + 4;
+    reg  [31:0] pc_next; //next 
+    assign pc_4 = pc + 4; //add 4
     
-    always_ff @(posedge clk) begin
+    always_ff @(posedge clk) begin //update address
         if (rst) pc <= 0;
         else pc <= pc_next;
     end
     
     always_comb begin
-        case (pc_ctrl)
+        case (pc_ctrl) //mux selector for next address
             0: pc_next = pc_4;
             1: pc_next = pc_jalr;
             2: pc_next = pc_branch;

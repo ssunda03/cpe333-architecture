@@ -20,18 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module dmem(
+module dmem( //data memory
     input   wire        clk,
-    input   wire        we,
-    input   wire [31:0] dmem_addr,
-    input   wire [31:0] dmem_data,
-    output  wire [31:0] dmem_out
+    input   wire        we, //write enable
+    input   wire [31:0] dmem_addr, //write address/read address
+    input   wire [31:0] dmem_data, //input data to memory
+    output  wire [31:0] dmem_out //output data from memory
     );
-    reg [31:0] RAM [63:0];
+    reg [31:0] RAM [63:0]; //memory
     
-    assign dmem_out = RAM[dmem_addr[31:2]];
+    assign dmem_out = RAM[dmem_addr[31:2]]; //output data
     
     always_ff @(posedge clk) begin
-        if (we) RAM[dmem_addr[31:2]] <= dmem_data;
+        if (we) RAM[dmem_addr[31:2]] <= dmem_data; //write data
     end
 endmodule
