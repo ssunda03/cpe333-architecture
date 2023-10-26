@@ -34,14 +34,14 @@ module testbench(
     initial begin
         clk = 0;
         rst = 0;
-        forever #5 clk = ~clk;
+        forever #10 clk = ~clk;
     end 
     
     initial begin
-        #4 rst = 1;
-        #5 rst = 0;
+        #9 rst = 1;
+        #10 rst = 0;
         
-        #200 $finish();
+        #400 $finish();
     end   
     
 endmodule

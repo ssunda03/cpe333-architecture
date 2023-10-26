@@ -31,7 +31,7 @@ module dmem( //data memory
     
     assign dmem_out = RAM[dmem_addr[31:2]]; //output data
     
-    always_ff @(posedge clk) begin
+    always_ff @(negedge clk) begin
         if (we) RAM[dmem_addr[31:2]] <= dmem_data; //write data
     end
 endmodule

@@ -36,7 +36,7 @@ module regfile( //register file
     output wire [31:0]  rs2 //read output 2
     );
     reg [31:0]  X[31:0]; //registers
-    wire [31:0] rf_wd; //write input
+    reg [31:0] rf_wd; //write input
     
     initial begin //initialize registers
         for (int i = 0; i < 32; i++) begin
@@ -46,13 +46,20 @@ module regfile( //register file
     
     assign rs1 = X[rf_a1]; //read outputs
     assign rs2 = X[rf_a2];
-    assign rf_wd = //write MUX, select from ALU, memory, or pc
+    /*assign rf_wd = //write MUX, select from ALU, memory, or pc
         rf_wr_ctrl == 0 ? pc_4       : 
         rf_wr_ctrl == 1 ? 'hDEADBEEF :
         rf_wr_ctrl == 2 ? mem_data   :
-                          alu_res    ;
+                          alu_res    ;*/
     
-    always_ff @(posedge clk) begin //write into registers
+    always_comb begin
+        if (rf_wr_ctrl == 0) rf_wd = pc_4;
+        else if (rf_wr_ctrl == 1) rf_wd = 'hDEADBEEF;
+        else if (rf_wr_ctrl == 2) rf_wd = mem_data;
+        else rf_wd = alu_res;
+    end
+    
+    always @(negedge clk) begin //write into registers
         if (rf_we && rf_wa != 0) X[rf_wa] <= rf_wd; //if we and not writing to 0
     end
     
