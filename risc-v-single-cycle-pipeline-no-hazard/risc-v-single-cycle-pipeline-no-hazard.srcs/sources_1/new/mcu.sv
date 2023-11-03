@@ -33,7 +33,7 @@ typedef struct packed {
     logic [31:0]    alu_res, //result of ALU
                     mem_data; //data read from memory
     // ctrl
-    logic [1:0]     pc_ctrl; //mux control for PC
+    logic [2:0]     pc_ctrl; //mux control for PC
     logic [2:0]     imm_ctrl; //mux control for Immediate Gen
     logic           rf_we; //write enable for regfile
     logic [1:0]     rf_wr_ctrl; //mux control for regfile
@@ -49,17 +49,35 @@ module mcu(
 
     preg_t          FETCH, DECODE, EXEC, MEM, WRITE; //pipelined registers for each stage
     wire            br_eq, br_lt, br_ltu; //branch condition outputs
-    wire [1:0]      pc_ctrl; //pc controller
+    wire [2:0]      pc_ctrl;
+    wire            pc_we_raw;
+    wire            pc_we;
     wire            alu_zero; //whether ALU returns 0
+    wire [1:0] forward_a ,forward_b;
+    wire imem_ctrl;
+    wire [31:0]     pc_prev;
+    logic [31:0] d_instr;
+    
+    assign pc_prev = DECODE.pc - 4;
+    
+    initial begin //initialize nops in each pipline register
+        FETCH.instr <= 32'h00000013;
+        DECODE.instr <= 32'h00000013;
+        EXEC.instr <= 32'h00000013;
+        MEM.instr <= 32'h00000013;
+        WRITE.instr <= 32'h00000013;
+    end
     
     pc PC( // program counter
         clk, 
         rst,
+        pc_we,
         
         pc_ctrl,
         DECODE.pc_jalr,
         DECODE.pc_branch,
         DECODE.pc_jal,
+        pc_prev,
         //outputs
         FETCH.pc,
         FETCH.pc_4
@@ -67,15 +85,26 @@ module mcu(
     
     imem IMEM( //instruction memory
         FETCH.pc,
+        imem_ctrl,
         //outputs
         FETCH.instr
     );
     
     always_ff @(posedge clk) begin
-        DECODE.instr <= FETCH.instr; //propogate stages
+        DECODE.instr <= d_instr; //propogate stages
         DECODE.pc <= FETCH.pc;
         DECODE.pc_4 <= FETCH.pc_4;
     end
+    
+    stall_unit STALL_UNIT(
+        FETCH.instr,
+        DECODE.rf_wr_ctrl,
+        DECODE.rf_wa,
+        pc_we_raw,
+        
+        d_instr,
+        pc_we
+    );
     
     branch_cond_gen BRANCH_COND_GEN( //branch condition generator
         DECODE.rs1, //read 1 from regfile
@@ -101,7 +130,9 @@ module mcu(
         DECODE.rf_wr_ctrl, //regfile write mux
         DECODE.imm_ctrl, //immediate generator mux
         DECODE.mem_we, //memory write enable
-        DECODE.rf_we //regfile write enable
+        DECODE.rf_we, //regfile write enable
+        imem_ctrl,
+        pc_we_raw
     );
     
     regfile REGFILE(
@@ -139,7 +170,25 @@ module mcu(
     assign DECODE.rf_wa = DECODE.instr[11:7]; //set write address during DECODE stage
     
     always_ff @(posedge clk) begin
-        EXEC <= DECODE; //propogate information to next pipeline register
+        EXEC.pc_jalr <= DECODE.pc_jalr; //propogate information to next pipeline register
+        EXEC.pc_branch <= DECODE.pc_branch;
+        EXEC.pc_jal <= DECODE.pc_jal;
+        EXEC.instr <= DECODE.instr;
+        EXEC.pc <= DECODE.pc;
+        EXEC.pc_4 <= DECODE.pc_4;
+        EXEC.rs1 <= DECODE.rs1;
+        EXEC.rs2 <= DECODE.rs2;
+        EXEC.imm <= DECODE.imm;
+        EXEC.rf_wa <= DECODE.rf_wa;
+        EXEC.mem_data <= DECODE.mem_data;
+        EXEC.pc_ctrl <= DECODE.pc_ctrl;
+        EXEC.imm_ctrl <= DECODE.imm_ctrl;
+        EXEC.rf_we <= DECODE.rf_we;
+        EXEC.rf_wr_ctrl <= DECODE.rf_wr_ctrl;
+        EXEC.alu_a_ctrl <= DECODE.alu_a_ctrl;
+        EXEC.alu_b_ctrl <= DECODE.alu_b_ctrl;
+        EXEC.alu_ctrl <= DECODE.alu_ctrl;
+        EXEC.mem_we <= DECODE.mem_we;
     end
     
     alu ALU( //arithmetic logic unit
@@ -150,13 +199,40 @@ module mcu(
         EXEC.pc,
         EXEC.rs2,
         EXEC.imm,
+        
+        forward_a,
+        forward_b,
+        WRITE.mem_data,
+        WRITE.alu_res,
+        MEM.alu_res,
+        WRITE.rf_wr_ctrl,
         //outputs
         alu_zero, //if zero
-        EXEC.alu_res //result
+        EXEC.alu_res, //result
+        MEM.rs2
     );
     
     always_ff @(posedge clk) begin
-        MEM <= EXEC; //next pipeline register
+        MEM.pc_jalr <= EXEC.pc_jalr; //propogate information to next pipeline register
+        MEM.pc_branch <= EXEC.pc_branch;
+        MEM.pc_jal <= EXEC.pc_jal;
+        MEM.instr <= EXEC.instr;
+        MEM.pc <= EXEC.pc;
+        MEM.pc_4 <= EXEC.pc_4;
+        MEM.rs1 <= EXEC.rs1;
+        MEM.rs2 <= EXEC.rs2;
+        MEM.imm <= EXEC.imm;
+        MEM.rf_wa <= EXEC.rf_wa;
+        MEM.alu_res <= EXEC.alu_res;
+        MEM.mem_data <= EXEC.mem_data;
+        MEM.pc_ctrl <= EXEC.pc_ctrl;
+        MEM.imm_ctrl <= EXEC.imm_ctrl;
+        MEM.rf_we <= EXEC.rf_we;
+        MEM.rf_wr_ctrl <= EXEC.rf_wr_ctrl;
+        MEM.alu_a_ctrl <= EXEC.alu_a_ctrl;
+        MEM.alu_b_ctrl <= EXEC.alu_b_ctrl;
+        MEM.alu_ctrl <= EXEC.alu_ctrl;
+        MEM.mem_we <= EXEC.mem_we;
     end
 
 
@@ -164,14 +240,44 @@ module mcu(
         clk,
         MEM.mem_we, //write enable for memory
         MEM.alu_res, //result of ALU
-        MEM.rs2, //read from regfile
+        WRITE.rs2, //read from regfile
         //outputs
         MEM.mem_data //data read from memory
     );
 
     always_ff @(posedge clk) begin
-        WRITE <= MEM; //next pipeline register
+        WRITE.pc_jalr <= MEM.pc_jalr; //propogate information to next pipeline register
+        WRITE.pc_branch <= MEM.pc_branch;
+        WRITE.pc_jal <= MEM.pc_jal;
+        WRITE.instr <= MEM.instr;
+        WRITE.pc <= MEM.pc;
+        WRITE.pc_4 <= MEM.pc_4;
+        WRITE.rs1 <= MEM.rs1;
+        WRITE.rs2 <= MEM.rs2;
+        WRITE.imm <= MEM.imm;
+        WRITE.rf_wa <= MEM.rf_wa;
+        WRITE.alu_res <= MEM.alu_res;
+        WRITE.mem_data <= MEM.mem_data;
+        WRITE.pc_ctrl <= MEM.pc_ctrl;
+        WRITE.imm_ctrl <= MEM.imm_ctrl;
+        WRITE.rf_we <= MEM.rf_we;
+        WRITE.rf_wr_ctrl <= MEM.rf_wr_ctrl;
+        WRITE.alu_a_ctrl <= MEM.alu_a_ctrl;
+        WRITE.alu_b_ctrl <= MEM.alu_b_ctrl;
+        WRITE.alu_ctrl <= MEM.alu_ctrl;
+        WRITE.mem_we <= MEM.mem_we;
     end
+    
+    forward_unit FORWARD_UNIT(
+        EXEC.instr[19:15],
+        EXEC.instr[24:20],
+        MEM.rf_wa,
+        WRITE.rf_wa,
+        EXEC.instr,
+        
+        forward_a,
+        forward_b
+    );
     
     
 endmodule

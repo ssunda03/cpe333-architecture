@@ -31,8 +31,18 @@ module alu( //arithmetic logic unit
     input wire [31:0]   rs2,
     input wire [31:0]   imm,
     
+    input wire [1:0] forwardA, //control for rs1
+    input wire [1:0] forwardB, //control for rs2
+    
+    input logic [31:0] mem_data,
+    input logic [31:0] mem_alu, //data forwarded from the memory module
+    input logic [31:0] forward_alu, //data forwarded from the alu
+    input wire [1:0] rf_ctrl,
+    //input logic [31:0] forward_wrt, //data forwarded from the writeback stage
+    
     output wire         alu_zero, //if zero
-    output reg [31:0]   alu_res
+    output logic [31:0]   alu_res,
+    output reg [31:0]   alub
     );
     parameter   alu_ADD     = 4'b0000, //operations
                 alu_SLL     = 4'b0001,
@@ -46,13 +56,29 @@ module alu( //arithmetic logic unit
                 alu_LUI     = 4'b1001,
                 alu_SRA     = 4'b1101;
                 
-                
+    wire [31:0] intermed_a;
+    wire [31:0] intermed_b;            
     wire [31:0] alu_a; //inputs
     wire [31:0] alu_b;
+    wire [31:0] forward_mem;
+    
+    assign forward_mem = (rf_ctrl == 2) ? mem_data : (rf_ctrl == 3) ? mem_alu : 0;
     
     assign alu_zero = alu_res == 0;
-    assign alu_a = ~alu_a_ctrl ? rs1 : pc; //selector of inputs based on instruction
-    assign alu_b = ~alu_b_ctrl ? rs2 : imm;
+    assign alu_a = ~alu_a_ctrl ? intermed_a : pc; //selector of inputs based on instruction
+    assign alu_b = ~alu_b_ctrl ? intermed_b : imm;
+    assign alub = intermed_b;
+    assign intermed_a = (forwardA == 2'b00) ? rs1 :
+                  (forwardA == 2'b01) ? forward_mem :
+                  (forwardA == 2'b10) ? forward_alu : 
+                  //(forwardA == 2'b11) ? forward_wrt : 
+                  rs1;
+ 
+    assign intermed_b = (forwardB == 2'b00) ? rs2 :
+                  (forwardB == 2'b01) ? forward_mem :
+                  (forwardB == 2'b10) ? forward_alu : 
+                  //(forwardB == 2'b11) ? forward_wrt : 
+                  rs2;
     
     always_comb begin
         case (alu_ctrl) //perform operations

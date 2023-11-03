@@ -23,11 +23,13 @@
 module pc( //program counter
     input wire          clk,
     input wire          rst,
+    input wire          pc_we,
     
-    input wire [1:0]    pc_ctrl, //next instruction mux selector
+    input wire [2:0]    pc_ctrl, //next instruction mux selector
     input wire [31:0]   pc_jalr, //potential next addresses
     input wire [31:0]   pc_branch,
     input wire [31:0]   pc_jal,
+    input wire [31:0]   pc_prev,
     
     output reg [31:0]   pc, //current address
     output wire [31:0]  pc_4 //address + 4
@@ -38,7 +40,7 @@ module pc( //program counter
     
     always_ff @(posedge clk) begin //update address
         if (rst) pc <= 0;
-        else pc <= pc_next;
+        else if (pc_we) pc <= pc_next;
     end
     
     always_comb begin
@@ -47,6 +49,7 @@ module pc( //program counter
             1: pc_next = pc_jalr;
             2: pc_next = pc_branch;
             3: pc_next = pc_jal;
+            4: pc_next = pc_prev;
         endcase
     end
     
