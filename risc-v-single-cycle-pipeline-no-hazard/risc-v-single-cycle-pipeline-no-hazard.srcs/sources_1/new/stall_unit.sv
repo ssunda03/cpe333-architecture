@@ -20,22 +20,28 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module stall_unit(
-    input logic [31:0] instr,
-    input wire [1:0] mem_read,
-    input logic [4:0] exec_rfwa,
+    input logic [31:0] f_instr,
+    input logic [1:0] dec_rf_wr_ctrl,
+    input logic [4:0] dec_rf_wa,
+    input logic [1:0] exec_rf_wr_ctrl,
+    input logic [4:0] exec_rf_wa,
     input logic pc_we,
-    //input logic [2:0] pc_ctrl,
     
     output logic [31:0] out_instr,
     output logic out_pc_we
-    //output logic [2:0] out_pc_ctrl
 );
 
-assign out_instr = (mem_read == 2 & 
-        (exec_rfwa==instr[24:20] || exec_rfwa==instr[19:15])) ? 
-            32'h00000013 : instr;
-assign out_pc_we = (mem_read == 2 & 
-        (exec_rfwa==instr[24:20] || exec_rfwa==instr[19:15])) ? 
-            0 : pc_we;     
+always_comb begin
+    out_instr = f_instr;
+    out_pc_we = pc_we;
+    
+    if (
+        ((dec_rf_wa==f_instr[24:20] || dec_rf_wa==f_instr[19:15]) && (dec_rf_wr_ctrl == 2 || f_instr[6:0]==7'b1100011)) || // if lw, add OR add, br 
+        ((exec_rf_wa==f_instr[24:20] || exec_rf_wa==f_instr[19:15]) && f_instr[6:0]==7'b1100011 && exec_rf_wr_ctrl == 2)
+    ) begin
+        out_instr = 32'h13;
+        out_pc_we = 1'b0;
+    end
+end    
         
 endmodule

@@ -32,6 +32,11 @@ module regfile( //register file
     input wire [31:0]   mem_data, //input from memory
     input wire [31:0]   pc_4, //pc + 4
     
+    input wire [1:0] fwA,
+    input wire [1:0] fwB,
+    input wire [31:0] mem_alu,
+    input wire [31:0] write_mem_out,
+    
     output wire [31:0]  rs1, //read output 1
     output wire [31:0]  rs2 //read output 2
     );
@@ -44,13 +49,14 @@ module regfile( //register file
         end
     end
     
-    assign rs1 = X[rf_a1]; //read outputs
-    assign rs2 = X[rf_a2];
-    /*assign rf_wd = //write MUX, select from ALU, memory, or pc
-        rf_wr_ctrl == 0 ? pc_4       : 
-        rf_wr_ctrl == 1 ? 'hDEADBEEF :
-        rf_wr_ctrl == 2 ? mem_data   :
-                          alu_res    ;*/
+    assign rs1 = fwA == 0 ? X[rf_a1] : 
+                 fwA == 1 ? write_mem_out : 
+                 fwA == 2 ? mem_alu :
+                 'hDEADBEEF;
+    assign rs1 = fwB == 0 ? X[rf_a2] : 
+                 fwB == 1 ? write_mem_out : 
+                 fwB == 2 ? mem_alu :
+                 'hDEADBEEF;
     
     always_comb begin
         if (rf_wr_ctrl == 0) rf_wd = pc_4;

@@ -28,7 +28,7 @@ module ctrl_unit( //control unit for pipeline registers
 	input func7,          //-  ir[30]
     input [2:0] func3,    //-  ir[14:12]
     output logic [3:0] alu_fun, //ALU operation
-    output logic [2:0] pcSource, // pc MUX selector
+    output logic [1:0] pcSource, // pc MUX selector
     output logic alu_srcA, //ALU input selectors
     output logic alu_srcB, 
 	output logic [1:0] rf_wr_sel, //regfile write selector
@@ -73,7 +73,7 @@ module ctrl_unit( //control unit for pipeline registers
     always_comb
     begin 
         //- schedule all values to avoid latch
-		pcSource = 3'b000;  alu_srcB = 0;    rf_wr_sel = 2'b00; 
+		pcSource = 2'b00;  alu_srcB = 0;    rf_wr_sel = 2'b00; 
 		alu_srcA = 0;   alu_fun  = 4'b0000; imm_ctrl = 3'b000; mem_we = 1'b0; rf_we = 1'b0;
 		imem_ctrl = 0; pc_we = 1;
 		

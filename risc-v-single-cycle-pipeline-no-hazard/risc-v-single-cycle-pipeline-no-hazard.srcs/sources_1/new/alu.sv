@@ -31,17 +31,16 @@ module alu( //arithmetic logic unit
     input wire [31:0]   rs2,
     input wire [31:0]   imm,
     
-    input wire [1:0] forwardA, //control for rs1
-    input wire [1:0] forwardB, //control for rs2
+    input wire [1:0]    forwardA, //control for rs1
+    input wire [1:0]    forwardB, //control for rs2
     
-    input logic [31:0] mem_data,
-    input logic [31:0] mem_alu, //data forwarded from the memory module
-    input logic [31:0] forward_alu, //data forwarded from the alu
-    input wire [1:0] rf_ctrl,
-    //input logic [31:0] forward_wrt, //data forwarded from the writeback stage
+    input logic [31:0]  mem_data,
+    input logic [31:0]  mem_alu, //data forwarded from the memory module
+    input logic [31:0]  forward_alu, //data forwarded from the alu
+    input wire [1:0]    rf_ctrl,
     
     output wire         alu_zero, //if zero
-    output logic [31:0]   alu_res,
+    output logic [31:0] alu_res,
     output reg [31:0]   alub
     );
     parameter   alu_ADD     = 4'b0000, //operations
@@ -70,14 +69,12 @@ module alu( //arithmetic logic unit
     assign alub = intermed_b;
     assign intermed_a = (forwardA == 2'b00) ? rs1 :
                   (forwardA == 2'b01) ? forward_mem :
-                  (forwardA == 2'b10) ? forward_alu : 
-                  //(forwardA == 2'b11) ? forward_wrt : 
+                  (forwardA == 2'b10) ? forward_alu :
                   rs1;
  
     assign intermed_b = (forwardB == 2'b00) ? rs2 :
                   (forwardB == 2'b01) ? forward_mem :
-                  (forwardB == 2'b10) ? forward_alu : 
-                  //(forwardB == 2'b11) ? forward_wrt : 
+                  (forwardB == 2'b10) ? forward_alu :
                   rs2;
     
     always_comb begin

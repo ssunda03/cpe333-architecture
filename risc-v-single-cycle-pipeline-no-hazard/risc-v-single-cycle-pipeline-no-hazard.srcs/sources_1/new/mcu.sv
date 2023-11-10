@@ -55,10 +55,7 @@ module mcu(
     wire            alu_zero; //whether ALU returns 0
     wire [1:0] forward_a ,forward_b;
     wire imem_ctrl;
-    wire [31:0]     pc_prev;
-    logic [31:0] d_instr;
-    
-    assign pc_prev = DECODE.pc - 4;
+    logic [31:0]    d_instr;
     
     initial begin //initialize nops in each pipline register
         FETCH.instr <= 32'h00000013;
@@ -77,7 +74,6 @@ module mcu(
         DECODE.pc_jalr,
         DECODE.pc_branch,
         DECODE.pc_jal,
-        pc_prev,
         //outputs
         FETCH.pc,
         FETCH.pc_4
@@ -100,6 +96,8 @@ module mcu(
         FETCH.instr,
         DECODE.rf_wr_ctrl,
         DECODE.rf_wa,
+        EXEC.rf_wr_ctrl,
+        EXEC.rf_wa,
         pc_we_raw,
         
         d_instr,
@@ -146,6 +144,12 @@ module mcu(
         WRITE.alu_res, //ALU result
         WRITE.mem_data, //data read from memory
         WRITE.pc_4, //pc + 4
+        
+        forward_a,
+        forward_b,
+        MEM.alu_res,
+        WRITE.mem_data
+        
         //outputs
         DECODE.rs1, //read registers (during DECODE stage)
         DECODE.rs2 
