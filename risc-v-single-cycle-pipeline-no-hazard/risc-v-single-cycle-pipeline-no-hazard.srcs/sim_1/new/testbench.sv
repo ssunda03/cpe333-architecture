@@ -40,8 +40,6 @@ module testbench(
     initial begin
         #9 rst = 1;
         #10 rst = 0;
-        
-        #400 $finish();
     end   
     
 endmodule

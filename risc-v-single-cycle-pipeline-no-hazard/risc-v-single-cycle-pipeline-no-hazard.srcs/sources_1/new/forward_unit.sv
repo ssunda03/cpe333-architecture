@@ -52,14 +52,14 @@ module forward_unit(
                    (write_rd == exec_a2)   ? 2'b01 :
                                              2'b00 ;
                                              
-     assign dec_fw_A =  (dec_instr[6:0] != 7'b1100011)  ? 1'b0 :
+     assign dec_fw_A =  (dec_instr[6:0] != 7'b1100011 && dec_instr[6:0] != 7'b1100111)  ? 1'b0 :
                         (dec_a1 == 0)                   ? 1'b0 :
                         (mem_rd == dec_a1 && 
                          mem_instr != 32'h00000013 && 
                          mem_rf_wr_ctrl == 3)           ? 1'b1 :
                                                           1'b0 ;
                                                                                      
-     assign dec_fw_B =  (dec_instr[6:0] != 7'b1100011)  ? 1'b0 :
+     assign dec_fw_B =  (dec_instr[6:0] != 7'b1100011 && dec_instr[6:0] != 7'b1100111)  ? 1'b0 :
                         (dec_a2 == 0)                   ? 1'b0 :
                         (mem_rd == dec_a2 && 
                          mem_instr != 32'h00000013 && 

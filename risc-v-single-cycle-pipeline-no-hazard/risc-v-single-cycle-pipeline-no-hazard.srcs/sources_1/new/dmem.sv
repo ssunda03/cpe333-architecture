@@ -27,7 +27,7 @@ module dmem( //data memory
     input   wire [31:0] dmem_data, //input data to memory
     output  wire [31:0] dmem_out //output data from memory
     );
-    reg [31:0] RAM [63:0]; //memory
+    reg [31:0] RAM [65535:0]; //memory
     
     assign dmem_out = RAM[dmem_addr[31:2]]; //output data
     

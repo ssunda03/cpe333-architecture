@@ -84,17 +84,25 @@ set_property ip_output_repo c:/Users/alexa/Desktop/Everything/School/CollegeYear
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_mem C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imem.mem
+read_mem {
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imem.mem
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/test_all/testall.mem
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/cpe333-architecture/matmul50x50.mem
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/cpe333-architecture/matmul10x10.mem
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/cpe333-architecture/matmul3x3.mem
+}
 read_verilog -library xil_defaultlib -sv {
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/alu.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/branch_addr_gen.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/branch_cond_gen.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/ctrl_unit.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/dmem.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/forward_unit.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imem.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imm_gen.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/pc.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/regfile.sv
+  C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/stall_unit.sv
   C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv
 }
 OPTRACE "Adding files" END { }

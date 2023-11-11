@@ -34,10 +34,15 @@ module stall_unit(
 always_comb begin
     out_instr = f_instr;
     out_pc_we = pc_we;
-    
-    if (
-        ((dec_rf_wa==f_instr[24:20] || dec_rf_wa==f_instr[19:15]) && (dec_rf_wr_ctrl == 2 || f_instr[6:0]==7'b1100011)) || // if lw, add OR add, br 
-        ((exec_rf_wa==f_instr[24:20] || exec_rf_wa==f_instr[19:15]) && f_instr[6:0]==7'b1100011 && exec_rf_wr_ctrl == 2)
+    if(dec_rf_wa == 0 && exec_rf_wa == 0)
+    begin
+    end
+    else if (
+        (((dec_rf_wa==f_instr[24:20] && f_instr[24:20] != 0) || (dec_rf_wa==f_instr[19:15] && f_instr[19:15] != 0)) 
+                && (dec_rf_wr_ctrl == 2 || (f_instr[6:0]==7'b1100011 || f_instr[6:0]==7'b1100111))) 
+                || // if lw, add OR add, br 
+        (((exec_rf_wa==f_instr[24:20] && f_instr[24:20] != 0) || (exec_rf_wa==f_instr[19:15] && 
+                f_instr[19:15] != 0)) && (f_instr[6:0]==7'b1100011 || f_instr[6:0]==7'b1100111) && exec_rf_wr_ctrl == 2)
     ) begin
         out_instr = 32'h13;
         out_pc_we = 1'b0;

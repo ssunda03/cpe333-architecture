@@ -16,7 +16,7 @@ set rt::rc [catch {
     set rt::cmdEcho 0
     rt::set_parameter writeXmsg true
     rt::set_parameter enableParallelHelperSpawn true
-    set ::env(RT_TMP) "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1/.Xil/Vivado-43732-LAPTOP-NLET9JJQ/realtime/tmp"
+    set ::env(RT_TMP) "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1/.Xil/Vivado-26896-LAPTOP-NLET9JJQ/realtime/tmp"
     if { [ info exists ::env(RT_TMP) ] } {
       file delete -force $::env(RT_TMP)
       file mkdir $::env(RT_TMP)
@@ -35,16 +35,22 @@ set rt::rc [catch {
 
     set rt::useElabCache false
     if {$rt::useElabCache == false} {
-      rt::read_verilog -sv -include C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new {
+      rt::read_verilog -sv -include {
+    C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new
+    C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/test_all
+    C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/imports/cpe333-architecture
+  } {
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/alu.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/branch_addr_gen.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/branch_cond_gen.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/ctrl_unit.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/dmem.sv
+      C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/forward_unit.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imem.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/imm_gen.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/pc.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/regfile.sv
+      C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/stall_unit.sv
       C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.srcs/sources_1/new/mcu.sv
     }
       rt::filesetChecksum
@@ -65,7 +71,7 @@ set rt::rc [catch {
     rt::set_parameter webTalkPath {C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.cache/wt}
     rt::set_parameter synthDebugLog false
     rt::set_parameter printModuleName false
-    rt::set_parameter enableSplitFlowPath "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1/.Xil/Vivado-43732-LAPTOP-NLET9JJQ/"
+    rt::set_parameter enableSplitFlowPath "C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1/.Xil/Vivado-26896-LAPTOP-NLET9JJQ/"
     set ok_to_delete_rt_tmp true 
     if { [rt::get_parameter parallelDebug] } { 
        set ok_to_delete_rt_tmp false 

@@ -25,7 +25,7 @@ module imem( //instruction memory
     
     output  wire [31:0] imem_out //instruct that has been read
     );
-    logic [31:0] RAM[63:0]; //memory
+    logic [31:0] RAM[65535:0]; //memory
     initial $readmemh("imem.mem",RAM); //input program
     
     assign imem_out = (imem_stall) ? 31'h00000013 : RAM[imem_a[31:2]]; //send out

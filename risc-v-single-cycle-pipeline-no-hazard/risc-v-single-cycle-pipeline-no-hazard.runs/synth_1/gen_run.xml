@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1698022713">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1699683279">
   <File Type="PA-TCL" Name="mcu.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="mcu_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="mcu_reports.tcl"/>
   <File Type="RDS-RDS" Name="mcu.vds"/>
+  <File Type="RDS-UTIL" Name="mcu_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="mcu_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="mcu.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="mcu_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="mcu_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/alu.sv">
@@ -41,6 +46,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/forward_unit.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/imem.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -69,6 +81,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/stall_unit.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/mcu.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -78,6 +97,38 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/imem.mem">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/test_all/testall.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../test_all/testall.mem"/>
+        <Attr Name="ImportTime" Val="1593028068"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul50x50.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../matmul50x50.mem"/>
+        <Attr Name="ImportTime" Val="1696298884"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul10x10.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../matmul10x10.mem"/>
+        <Attr Name="ImportTime" Val="1696298884"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/cpe333-architecture/matmul3x3.mem">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../matmul3x3.mem"/>
+        <Attr Name="ImportTime" Val="1696298884"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -100,7 +151,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

@@ -104,6 +104,7 @@ module ctrl_unit( //control unit for pipeline registers
 				rf_wr_sel = 0;
 				imm_ctrl = 4;
 				rf_we = 1'b1;
+				imem_ctrl = 1'b1;
 			end
 			
 			JALR:
@@ -112,6 +113,7 @@ module ctrl_unit( //control unit for pipeline registers
 			     rf_wr_sel = 0;
 				 imm_ctrl = 0;
 				 rf_we = 1'b1;
+				 imem_ctrl = 1'b1;
 			end
 			
 			LOAD: //load into regfile from memory
@@ -148,7 +150,7 @@ module ctrl_unit( //control unit for pipeline registers
 			BRANCH: //branch instr
 			begin
 				 imm_ctrl = 2;
-
+                 
 			     case(func3)
 			         3'b000: pcSource = br_eq  ? 2 : 0; 	// BEQ
 			         3'b001: pcSource = br_eq  ? 0 : 2; 	// BNE
@@ -156,6 +158,12 @@ module ctrl_unit( //control unit for pipeline registers
 			         3'b101: pcSource = br_lt  ? 0 : 2; 	// BGE
 			         3'b110: pcSource = br_ltu ? 2 : 0; 	// BLTU
 			         3'b111: pcSource = br_ltu ? 0 : 2;		// BGEU
+			     endcase
+			     
+			     case(pcSource)
+			         2'b00: imem_ctrl = 0;
+			         2'b10: imem_ctrl = 1;
+			         default: imem_ctrl = 0;
 			     endcase
 			end
 			

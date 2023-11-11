@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Oct 22 17:58:37 2023
-# Process ID: 43732
+# Start of session at: Fri Nov 10 22:14:42 2023
+# Process ID: 26896
 # Current directory: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1
 # Command line: vivado.exe -log mcu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mcu.tcl
 # Log file: C:/Users/alexa/Desktop/Everything/School/CollegeYear3/Fall/CPE333/repo/cpe333-architecture/risc-v-single-cycle-pipeline-no-hazard/risc-v-single-cycle-pipeline-no-hazard.runs/synth_1/mcu.vds

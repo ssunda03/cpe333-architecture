@@ -275,7 +275,7 @@ module mcu(
         EXEC.instr[19:15],
         EXEC.instr[24:20],
         DECODE.instr[19:15],
-        DECODE.instr[19:15],
+        DECODE.instr[24:20],
         MEM.rf_wa,
         WRITE.rf_wa,
         MEM.rf_wr_ctrl,
