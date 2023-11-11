@@ -53,7 +53,8 @@ module mcu(
     wire            pc_we_raw;
     wire            pc_we;
     wire            alu_zero; //whether ALU returns 0
-    wire [1:0] forward_a ,forward_b;
+    wire [1:0] exec_fw_a , exec_fw_b;
+    wire       dec_fw_a , dec_fw_b;
     wire imem_ctrl;
     logic [31:0]    d_instr;
     
@@ -145,10 +146,9 @@ module mcu(
         WRITE.mem_data, //data read from memory
         WRITE.pc_4, //pc + 4
         
-        forward_a,
-        forward_b,
+        dec_fw_a,
+        dec_fw_a,
         MEM.alu_res,
-        WRITE.mem_data,
         
         //outputs
         DECODE.rs1, //read registers (during DECODE stage)
@@ -204,8 +204,8 @@ module mcu(
         EXEC.rs2,
         EXEC.imm,
         
-        forward_a,
-        forward_b,
+        exec_fw_a,
+        exec_fw_a,
         WRITE.mem_data,
         WRITE.alu_res,
         MEM.alu_res,
@@ -274,9 +274,14 @@ module mcu(
     forward_unit FORWARD_UNIT(
         EXEC.instr[19:15],
         EXEC.instr[24:20],
+        DECODE.instr[19:15],
+        DECODE.instr[19:15],
         MEM.rf_wa,
         WRITE.rf_wa,
+        MEM.rf_wr_ctrl,
         EXEC.instr,
+        DECODE.instr,
+        MEM.instr,
         
         forward_a,
         forward_b

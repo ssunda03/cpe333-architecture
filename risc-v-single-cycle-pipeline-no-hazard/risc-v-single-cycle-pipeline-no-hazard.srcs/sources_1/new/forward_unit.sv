@@ -23,24 +23,46 @@
 module forward_unit(
         input logic [4:0] exec_a1,  //rs1 address from execute register
         input logic [4:0] exec_a2,  //rs2 address from execute register
+        input logic [4:0] dec_a1,  //from fetch instruction
+        input logic [4:0] dec_a2,  //from fetch instruction
         input logic [4:0] mem_rd, //address prev instruction will write to
         input logic [4:0] write_rd, //address prev instruction will write to
-        input logic [31:0] instr, //current instruction being executed
+        input logic [1:0] mem_rf_wr_ctrl,
+        input logic [31:0] exec_instr, //current instruction being executed
+        input logic [31:0] dec_instr, //current instruction being executed
+        input logic [31:0] mem_instr, //current instruction being executed
         
-        output wire [1:0] fw_A,
-        output wire [1:0] fw_B
+        
+        output wire [1:0] exec_fw_A,
+        output wire [1:0] exec_fw_B,
+        output wire dec_fw_A,
+        output wire dec_fw_B
     );
     
     //check if nop, if reading from 0, if need forward from ALU, if need forward from MEM
-    assign fw_A =  (instr == 32'h00000013) ? 2'b00 : 
+    assign exec_fw_A =  (exec_instr == 32'h00000013) ? 2'b00 : 
                    (exec_a1 == 0)          ? 2'b00 :
                    (mem_rd == exec_a1)     ? 2'b10 : 
                    (write_rd == exec_a1)   ? 2'b01 :
                                              2'b00 ;
     
-    assign fw_B =  (instr == 32'h00000013) ? 2'b00 : 
+    assign exec_fw_B =  (exec_instr == 32'h00000013) ? 2'b00 : 
                    (exec_a2 == 0)          ? 2'b00 :
                    (mem_rd == exec_a2)     ? 2'b10 : 
                    (write_rd == exec_a2)   ? 2'b01 :
                                              2'b00 ;
+                                             
+     assign dec_fw_A =  (dec_instr[6:0] != 7'b1100011)  ? 1'b0 :
+                        (dec_a1 == 0)                   ? 1'b0 :
+                        (mem_rd == dec_a1 && 
+                         mem_instr != 32'h00000013 && 
+                         mem_rf_wr_ctrl == 3)           ? 1'b1 :
+                                                          1'b0 ;
+                                                                                     
+     assign dec_fw_B =  (dec_instr[6:0] != 7'b1100011)  ? 1'b0 :
+                        (dec_a2 == 0)                   ? 1'b0 :
+                        (mem_rd == dec_a2 && 
+                         mem_instr != 32'h00000013 && 
+                         mem_rf_wr_ctrl == 3)           ? 1'b1 :
+                                                          1'b0 ;
 endmodule

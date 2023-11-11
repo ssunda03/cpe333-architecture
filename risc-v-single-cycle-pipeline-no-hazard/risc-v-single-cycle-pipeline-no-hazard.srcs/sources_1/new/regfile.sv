@@ -32,10 +32,9 @@ module regfile( //register file
     input wire [31:0]   mem_data, //input from memory
     input wire [31:0]   pc_4, //pc + 4
     
-    input wire [1:0] fwA,
-    input wire [1:0] fwB,
+    input wire fwA,
+    input wire fwB,
     input wire [31:0] mem_alu,
-    input wire [31:0] write_mem_out,
     
     output wire [31:0]  rs1, //read output 1
     output wire [31:0]  rs2 //read output 2
@@ -50,12 +49,10 @@ module regfile( //register file
     end
     
     assign rs1 = fwA == 0 ? X[rf_a1] : 
-                 fwA == 1 ? write_mem_out : 
-                 fwA == 2 ? mem_alu :
+                 fwA == 1 ? mem_alu :
                  'hDEADBEEF;
     assign rs2 = fwB == 0 ? X[rf_a2] : 
-                 fwB == 1 ? write_mem_out : 
-                 fwB == 2 ? mem_alu :
+                 fwB == 1 ? mem_alu :
                  'hDEADBEEF;
     
     always_comb begin
