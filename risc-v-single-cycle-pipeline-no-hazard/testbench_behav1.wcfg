@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="212801fs"></ZoomEndTime>
-      <Cursor1Time time="419000fs"></Cursor1Time>
+      <ZoomStartTime time="91010fs"></ZoomStartTime>
+      <ZoomEndTime time="212611fs"></ZoomEndTime>
+      <Cursor1Time time="110000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="299"></NameColumnWidth>
-      <ValueColumnWidth column_width="102"></ValueColumnWidth>
+      <ValueColumnWidth column_width="96"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="20" />
    <wvobject fp_name="/testbench/clk" type="logic">
@@ -32,7 +32,6 @@
    <wvobject fp_name="group1498" type="group">
       <obj_property name="label">PC</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/testbench/UUT/PC/clk" type="logic">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -46,8 +45,8 @@
          <obj_property name="ObjectShortName">pc_we</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/PC/pc_ctrl" type="array">
-         <obj_property name="ElementShortName">pc_ctrl[2:0]</obj_property>
-         <obj_property name="ObjectShortName">pc_ctrl[2:0]</obj_property>
+         <obj_property name="ElementShortName">pc_ctrl[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_ctrl[1:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/PC/pc_jalr" type="array">
          <obj_property name="ElementShortName">pc_jalr[31:0]</obj_property>
@@ -117,19 +116,6 @@
    <wvobject fp_name="group412" type="group">
       <obj_property name="label">STALL</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="/testbench/UUT/STALL_UNIT/instr" type="array">
-         <obj_property name="ElementShortName">instr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/STALL_UNIT/mem_read" type="array">
-         <obj_property name="ElementShortName">mem_read[1:0]</obj_property>
-         <obj_property name="ObjectShortName">mem_read[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/STALL_UNIT/exec_rfwa" type="array">
-         <obj_property name="ElementShortName">exec_rfwa[4:0]</obj_property>
-         <obj_property name="ObjectShortName">exec_rfwa[4:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="/testbench/UUT/STALL_UNIT/pc_we" type="logic">
          <obj_property name="ElementShortName">pc_we</obj_property>
          <obj_property name="ObjectShortName">pc_we</obj_property>
@@ -138,9 +124,9 @@
          <obj_property name="ElementShortName">out_instr[31:0]</obj_property>
          <obj_property name="ObjectShortName">out_instr[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testbench/UUT/STALL_UNIT/out_pc_we" type="array">
-         <obj_property name="ElementShortName">out_pc_we[2:0]</obj_property>
-         <obj_property name="ObjectShortName">out_pc_we[2:0]</obj_property>
+      <wvobject fp_name="/testbench/UUT/STALL_UNIT/out_pc_we" type="logic">
+         <obj_property name="ElementShortName">out_pc_we</obj_property>
+         <obj_property name="ObjectShortName">out_pc_we</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group897" type="group">
@@ -251,8 +237,8 @@
          <obj_property name="ObjectShortName">alu_fun[3:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/CTRL_UNIT/pcSource" type="array">
-         <obj_property name="ElementShortName">pcSource[2:0]</obj_property>
-         <obj_property name="ObjectShortName">pcSource[2:0]</obj_property>
+         <obj_property name="ElementShortName">pcSource[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pcSource[1:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/CTRL_UNIT/alu_srcA" type="logic">
          <obj_property name="ElementShortName">alu_srcA</obj_property>
@@ -294,6 +280,7 @@
    <wvobject fp_name="group928" type="group">
       <obj_property name="label">REGFILE</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/testbench/UUT/REGFILE/clk" type="logic">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -346,6 +333,14 @@
          <obj_property name="ElementShortName">rf_wd[31:0]</obj_property>
          <obj_property name="ObjectShortName">rf_wd[31:0]</obj_property>
       </wvobject>
+      <wvobject fp_name="/testbench/UUT/REGFILE/fwA" type="array">
+         <obj_property name="ElementShortName">fwA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">fwA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/REGFILE/fwB" type="array">
+         <obj_property name="ElementShortName">fwB[1:0]</obj_property>
+         <obj_property name="ObjectShortName">fwB[1:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject fp_name="group1488" type="group">
       <obj_property name="label">IMEM</obj_property>
@@ -370,29 +365,9 @@
    <wvobject fp_name="group491" type="group">
       <obj_property name="label">FORWARD_UNIT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/exec_rs1" type="array">
-         <obj_property name="ElementShortName">exec_rs1[4:0]</obj_property>
-         <obj_property name="ObjectShortName">exec_rs1[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/exec_rs2" type="array">
-         <obj_property name="ElementShortName">exec_rs2[4:0]</obj_property>
-         <obj_property name="ObjectShortName">exec_rs2[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/execute_rd" type="array">
-         <obj_property name="ElementShortName">execute_rd[4:0]</obj_property>
-         <obj_property name="ObjectShortName">execute_rd[4:0]</obj_property>
-      </wvobject>
       <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/mem_rd" type="array">
          <obj_property name="ElementShortName">mem_rd[4:0]</obj_property>
          <obj_property name="ObjectShortName">mem_rd[4:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/forwardA" type="array">
-         <obj_property name="ElementShortName">forwardA[1:0]</obj_property>
-         <obj_property name="ObjectShortName">forwardA[1:0]</obj_property>
-      </wvobject>
-      <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/forwardB" type="array">
-         <obj_property name="ElementShortName">forwardB[1:0]</obj_property>
-         <obj_property name="ObjectShortName">forwardB[1:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/FORWARD_UNIT/instr" type="array">
          <obj_property name="ElementShortName">instr[31:0]</obj_property>
@@ -402,6 +377,7 @@
    <wvobject fp_name="group935" type="group">
       <obj_property name="label">DMEM</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject fp_name="/testbench/UUT/DMEM/clk" type="logic">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>

@@ -53,7 +53,7 @@ module regfile( //register file
                  fwA == 1 ? write_mem_out : 
                  fwA == 2 ? mem_alu :
                  'hDEADBEEF;
-    assign rs1 = fwB == 0 ? X[rf_a2] : 
+    assign rs2 = fwB == 0 ? X[rf_a2] : 
                  fwB == 1 ? write_mem_out : 
                  fwB == 2 ? mem_alu :
                  'hDEADBEEF;

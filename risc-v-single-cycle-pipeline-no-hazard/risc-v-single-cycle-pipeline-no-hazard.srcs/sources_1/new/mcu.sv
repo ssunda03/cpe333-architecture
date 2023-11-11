@@ -148,7 +148,7 @@ module mcu(
         forward_a,
         forward_b,
         MEM.alu_res,
-        WRITE.mem_data
+        WRITE.mem_data,
         
         //outputs
         DECODE.rs1, //read registers (during DECODE stage)
@@ -228,7 +228,6 @@ module mcu(
         MEM.imm <= EXEC.imm;
         MEM.rf_wa <= EXEC.rf_wa;
         MEM.alu_res <= EXEC.alu_res;
-        MEM.mem_data <= EXEC.mem_data;
         MEM.pc_ctrl <= EXEC.pc_ctrl;
         MEM.imm_ctrl <= EXEC.imm_ctrl;
         MEM.rf_we <= EXEC.rf_we;
