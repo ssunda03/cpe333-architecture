@@ -5,22 +5,22 @@
    <db_ref_list>
       <db_ref path="testbench_behav.wdb" id="1">
          <top_modules>
-            <top_module name="\$unit_alu_sv " />
+            <top_module name="\$unit_L1cache_sv " />
             <top_module name="glbl" />
             <top_module name="testbench" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="10000fs"></ZoomStartTime>
-      <ZoomEndTime time="56601fs"></ZoomEndTime>
-      <Cursor1Time time="90000fs"></Cursor1Time>
+      <ZoomStartTime time="465800fs"></ZoomStartTime>
+      <ZoomEndTime time="592201fs"></ZoomEndTime>
+      <Cursor1Time time="510000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="295"></NameColumnWidth>
+      <NameColumnWidth column_width="283"></NameColumnWidth>
       <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="24" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -100,6 +100,7 @@
    <wvobject fp_name="/testbench/UUT/DECODE" type="array">
       <obj_property name="ElementShortName">DECODE</obj_property>
       <obj_property name="ObjectShortName">DECODE</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/UUT/EXEC" type="array">
       <obj_property name="ElementShortName">EXEC</obj_property>
@@ -404,17 +405,13 @@
          <obj_property name="ElementShortName">imem_a[31:0]</obj_property>
          <obj_property name="ObjectShortName">imem_a[31:0]</obj_property>
       </wvobject>
-      <wvobject fp_name="/testbench/UUT/IMEM/imem_stall" type="logic">
-         <obj_property name="ElementShortName">imem_stall</obj_property>
-         <obj_property name="ObjectShortName">imem_stall</obj_property>
-      </wvobject>
       <wvobject fp_name="/testbench/UUT/IMEM/imem_out" type="array">
-         <obj_property name="ElementShortName">imem_out[31:0]</obj_property>
-         <obj_property name="ObjectShortName">imem_out[31:0]</obj_property>
+         <obj_property name="ElementShortName">imem_out[3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">imem_out[3:0][31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/IMEM/RAM" type="array">
-         <obj_property name="ElementShortName">RAM[63:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">RAM[63:0][31:0]</obj_property>
+         <obj_property name="ElementShortName">RAM[65535:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM[65535:0][31:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject fp_name="group491" type="group">
@@ -501,8 +498,289 @@
          <obj_property name="ObjectShortName">dmem_out[31:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/testbench/UUT/DMEM/RAM" type="array">
-         <obj_property name="ElementShortName">RAM[63:0][31:0]</obj_property>
-         <obj_property name="ObjectShortName">RAM[63:0][31:0]</obj_property>
+         <obj_property name="ElementShortName">RAM[65535:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">RAM[65535:0][31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group140" type="group">
+      <obj_property name="label">L1CACHE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testbench/UUT/ICACHE/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/stall" type="logic">
+         <obj_property name="ElementShortName">stall</obj_property>
+         <obj_property name="ObjectShortName">stall</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/pc" type="array">
+         <obj_property name="ElementShortName">pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/set_in" type="array">
+         <obj_property name="ElementShortName">set_in[3:0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">set_in[3:0][31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/instr" type="array">
+         <obj_property name="ElementShortName">instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">instr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/miss" type="logic">
+         <obj_property name="ElementShortName">miss</obj_property>
+         <obj_property name="ObjectShortName">miss</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/ways" type="array">
+         <obj_property name="ElementShortName">ways[1:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">ways[1:0][7:0]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/testbench/UUT/ICACHE/ways[1]" type="array">
+            <obj_property name="ElementShortName">[1][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][7]" type="array">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][6]" type="array">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][5]" type="array">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][4]" type="array">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][3]" type="array">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][2]" type="array">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1]" type="array">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].valid" type="logic">
+                  <obj_property name="ElementShortName">.valid</obj_property>
+                  <obj_property name="ObjectShortName">.valid</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].dirty" type="logic">
+                  <obj_property name="ElementShortName">.dirty</obj_property>
+                  <obj_property name="ObjectShortName">.dirty</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].tag" type="array">
+                  <obj_property name="ElementShortName">.tag[24:0]</obj_property>
+                  <obj_property name="ObjectShortName">.tag[24:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].w_offset" type="array">
+                  <obj_property name="ElementShortName">.w_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.w_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].b_offset" type="array">
+                  <obj_property name="ElementShortName">.b_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.b_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][1].data" type="array">
+                  <obj_property name="ElementShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="ObjectShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0]" type="array">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].valid" type="logic">
+                  <obj_property name="ElementShortName">.valid</obj_property>
+                  <obj_property name="ObjectShortName">.valid</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].dirty" type="logic">
+                  <obj_property name="ElementShortName">.dirty</obj_property>
+                  <obj_property name="ObjectShortName">.dirty</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].tag" type="array">
+                  <obj_property name="ElementShortName">.tag[24:0]</obj_property>
+                  <obj_property name="ObjectShortName">.tag[24:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].w_offset" type="array">
+                  <obj_property name="ElementShortName">.w_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.w_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].b_offset" type="array">
+                  <obj_property name="ElementShortName">.b_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.b_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[1][0].data" type="array">
+                  <obj_property name="ElementShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="ObjectShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject fp_name="/testbench/UUT/ICACHE/ways[0]" type="array">
+            <obj_property name="ElementShortName">[0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][7]" type="array">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][6]" type="array">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][5]" type="array">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][4]" type="array">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][3]" type="array">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2]" type="array">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+               <obj_property name="isExpanded"></obj_property>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].valid" type="logic">
+                  <obj_property name="ElementShortName">.valid</obj_property>
+                  <obj_property name="ObjectShortName">.valid</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].dirty" type="logic">
+                  <obj_property name="ElementShortName">.dirty</obj_property>
+                  <obj_property name="ObjectShortName">.dirty</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].tag" type="array">
+                  <obj_property name="ElementShortName">.tag[24:0]</obj_property>
+                  <obj_property name="ObjectShortName">.tag[24:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].w_offset" type="array">
+                  <obj_property name="ElementShortName">.w_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.w_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].b_offset" type="array">
+                  <obj_property name="ElementShortName">.b_offset[1:0]</obj_property>
+                  <obj_property name="ObjectShortName">.b_offset[1:0]</obj_property>
+               </wvobject>
+               <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][2].data" type="array">
+                  <obj_property name="ElementShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="ObjectShortName">.data[3:0][31:0]</obj_property>
+                  <obj_property name="isExpanded"></obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][1]" type="array">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject fp_name="/testbench/UUT/ICACHE/ways[0][0]" type="array">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/LRU" type="array">
+         <obj_property name="ElementShortName">LRU[7:0]</obj_property>
+         <obj_property name="ObjectShortName">LRU[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/pc_w_offset" type="array">
+         <obj_property name="ElementShortName">pc_w_offset[1:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_w_offset[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/pc_index" type="array">
+         <obj_property name="ElementShortName">pc_index[2:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_index[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/pc_tag" type="array">
+         <obj_property name="ElementShortName">pc_tag[24:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_tag[24:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/hit" type="logic">
+         <obj_property name="ElementShortName">hit</obj_property>
+         <obj_property name="ObjectShortName">hit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/way" type="logic">
+         <obj_property name="ElementShortName">way</obj_property>
+         <obj_property name="ObjectShortName">way</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/re" type="logic">
+         <obj_property name="ElementShortName">re</obj_property>
+         <obj_property name="ObjectShortName">re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/we" type="logic">
+         <obj_property name="ElementShortName">we</obj_property>
+         <obj_property name="ObjectShortName">we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/n_sets" type="array">
+         <obj_property name="ElementShortName">n_sets[31:0]</obj_property>
+         <obj_property name="ObjectShortName">n_sets[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/ICACHE/n_ways" type="array">
+         <obj_property name="ElementShortName">n_ways[31:0]</obj_property>
+         <obj_property name="ObjectShortName">n_ways[31:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group401" type="group">
+      <obj_property name="label">CONDGEN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/testbench/UUT/BRANCH_COND_GEN/rs1" type="array">
+         <obj_property name="ElementShortName">rs1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rs1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_COND_GEN/rs2" type="array">
+         <obj_property name="ElementShortName">rs2[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rs2[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_COND_GEN/br_eq" type="logic">
+         <obj_property name="ElementShortName">br_eq</obj_property>
+         <obj_property name="ObjectShortName">br_eq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_COND_GEN/br_lt" type="logic">
+         <obj_property name="ElementShortName">br_lt</obj_property>
+         <obj_property name="ObjectShortName">br_lt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_COND_GEN/br_ltu" type="logic">
+         <obj_property name="ElementShortName">br_ltu</obj_property>
+         <obj_property name="ObjectShortName">br_ltu</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group389" type="group">
+      <obj_property name="label">ADDRGEN</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/pc" type="array">
+         <obj_property name="ElementShortName">pc[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/rs1" type="array">
+         <obj_property name="ElementShortName">rs1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">rs1[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/imm" type="array">
+         <obj_property name="ElementShortName">imm[31:0]</obj_property>
+         <obj_property name="ObjectShortName">imm[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/pc_jalr" type="array">
+         <obj_property name="ElementShortName">pc_jalr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_jalr[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/pc_branch" type="array">
+         <obj_property name="ElementShortName">pc_branch[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_branch[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/testbench/UUT/BRANCH_GEN/pc_jal" type="array">
+         <obj_property name="ElementShortName">pc_jal[31:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_jal[31:0]</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

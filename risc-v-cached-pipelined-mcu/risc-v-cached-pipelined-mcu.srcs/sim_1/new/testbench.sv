@@ -39,7 +39,7 @@ module testbench(
     
     initial begin
         #9 rst = 1;
-        #10 rst = 0;
+        #20 rst = 0;
     end   
     
 endmodule

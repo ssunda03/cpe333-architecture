@@ -32,7 +32,7 @@ module branch_addr_gen( //branch address generator
     
     //set next pc instruction based on generated immediate
     assign pc_jalr      = (rs1 + imm) & ~1;
-    assign pc_branch    = pc + imm;
-    assign pc_jal       = pc + imm;
+    assign pc_branch    = pc - 4 + imm;
+    assign pc_jal       = pc - 4 + imm;
     
 endmodule

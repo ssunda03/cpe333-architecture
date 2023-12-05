@@ -26,6 +26,7 @@ module stall_unit(
     input logic [1:0] exec_rf_wr_ctrl,
     input logic [4:0] exec_rf_wa,
     input logic pc_we,
+    input logic miss,
     
     output logic [31:0] out_instr,
     output logic out_pc_we
@@ -44,6 +45,10 @@ always_comb begin
         (((exec_rf_wa==f_instr[24:20] && f_instr[24:20] != 0) || (exec_rf_wa==f_instr[19:15] && 
                 f_instr[19:15] != 0)) && (f_instr[6:0]==7'b1100011 || f_instr[6:0]==7'b1100111) && exec_rf_wr_ctrl == 2)
     ) begin
+        out_instr = 32'h13;
+        out_pc_we = 1'b0;
+    end
+    else if (miss == 1) begin
         out_instr = 32'h13;
         out_pc_we = 1'b0;
     end

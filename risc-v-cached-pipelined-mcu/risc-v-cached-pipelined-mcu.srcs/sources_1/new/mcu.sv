@@ -43,15 +43,6 @@ typedef struct packed {
     logic           mem_we; //write enable to memory
 } preg_t; //pipelined register
 
-typedef struct {
-    logic valid;
-    logic dirty;
-    logic [24:0] tag;
-    logic [1:0] w_offset;
-    logic [1:0] b_offset;
-    
-    logic [31:0] data [3:0];
-} set_assoc_t;
 
 module mcu(
     input clk, rst
@@ -86,7 +77,19 @@ module mcu(
             DECODE.pc <= FETCH.pc;
             DECODE.pc_4 <= FETCH.pc_4;
             
-            EXEC <= DECODE;
+            EXEC.instr <= DECODE.instr;
+            EXEC.pc <= DECODE.pc;
+            EXEC.pc_4 <= DECODE.pc_4;
+            EXEC.rs1 <= DECODE.rs1;
+            EXEC.rs2 <= DECODE.rs2;
+            EXEC.imm <= DECODE.imm;
+            EXEC.rf_wa <= DECODE.rf_wa;
+            EXEC.rf_we <= DECODE.rf_we;
+            EXEC.rf_wr_ctrl <= DECODE.rf_wr_ctrl;
+            EXEC.alu_a_ctrl <= DECODE.alu_a_ctrl;
+            EXEC.alu_b_ctrl <= DECODE.alu_b_ctrl;
+            EXEC.alu_ctrl <= DECODE.alu_ctrl;
+            EXEC.mem_we <= DECODE.mem_we;
             MEM <= EXEC;
             WRITE <= MEM;
         end
@@ -129,6 +132,7 @@ module mcu(
         EXEC.rf_wr_ctrl,
         EXEC.rf_wa,
         pc_we_raw,
+        cache_miss,
         
         d_instr,
         pc_we
@@ -240,8 +244,8 @@ module mcu(
         WRITE.rf_wa,
         MEM.rf_wr_ctrl,
         
-        forward_a,
-        forward_b,
+        exec_fw_a,
+        exec_fw_b,
         dec_fw_a,
         dec_fw_b
     );

@@ -18,6 +18,15 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+typedef struct {
+    logic valid;
+    logic dirty;
+    logic [24:0] tag;
+    logic [1:0] w_offset;
+    logic [1:0] b_offset;
+    
+    logic [31:0] data [3:0];
+} set_assoc_t;
 
 module L1cache(
     input logic clk,
@@ -37,24 +46,6 @@ module L1cache(
     set_assoc_t ways [1:0][n_sets-1:0];
     logic [n_sets-1:0] LRU;
     
-    initial begin
-        for (int i = 0; i < n_ways; i++) begin // per way
-            for (int j = 0; i < n_sets; i++) begin // per set
-                ways[i][j].valid = 1'b0;
-                ways[i][j].dirty = 1'b0;
-                ways[i][j].tag = 25'b0;
-                ways[i][j].w_offset = 2'b0;
-                ways[i][j].b_offset = 2'b0;
-                
-                for (int k = 0; j < 4; j++) begin // per word
-                    ways[i][j].data[k] = 32'b0;
-                end
-            end
-        end
-        
-        LRU = {n_sets{1'b0}};    
-    end
-    
     logic [1:0] pc_w_offset;
     logic [2:0] pc_index;
     logic [24:0] pc_tag;
@@ -72,14 +63,22 @@ module L1cache(
     always_ff @(posedge clk) begin
         re <= 1;
         we <= 0;
-        miss <= 1;
         
         if (rst) begin
             for (int i = 0; i < n_ways; i++) begin // per way
-                for (int j = 0; i < n_sets; i++) begin // per set
+                for (int j = 0; j < n_sets; j++) begin // per set
                     ways[i][j].valid <= 1'b0;
+                    ways[i][j].dirty = 1'b0;
+                    ways[i][j].tag = 25'b0;
+                    ways[i][j].w_offset = 2'b0;
+                    ways[i][j].b_offset = 2'b0;
+                
+                    for (int k = 0; k < 4; k++) begin // per word
+                        ways[i][j].data[k] = 32'b0;
+                    end
                 end
             end
+            LRU = {n_sets{1'b0}};
         end
     
         else begin
@@ -91,7 +90,6 @@ module L1cache(
                 else if (hit) begin 
                     instr <= ways[way][pc_index].data[pc_w_offset];
                     LRU[pc_index] <= ~way;
-                    miss <= 0;
                 end
                 
                 else begin 
@@ -112,14 +110,17 @@ module L1cache(
     
     always_comb begin
         hit = 0;
-                
+        miss = 1;   
+        way = 0;     
         if (ways[0][pc_index].tag == pc_tag & ways[0][pc_index].valid) begin
             hit = 1;
             way = 0;
+            miss = 0;
         end
         
         else if (ways[1][pc_index].tag == pc_tag & ways[1][pc_index].valid) begin
             hit = 1;
+            miss = 0;
             way = 1;
         end
     end
